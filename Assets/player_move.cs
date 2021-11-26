@@ -16,6 +16,8 @@ public class player_move : MonoBehaviour
     public GameObject camara;
     public LayerMask encuentros;
     public BoxCollider2D box;
+    public GameObject tank;
+    public Vector3 offset = new Vector3(0, 0, 1);
     private void Start()
     {
 
@@ -31,12 +33,12 @@ public class player_move : MonoBehaviour
         //pillar imput
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
-        //pasarlo al animador
-       // animator.SetFloat("horizontal", movement.x);
-       // animator.SetFloat("vertical", movement.y);
-        //animator.SetFloat("speed", movement.sqrMagnitude);
-
+        //Debug.Log(movement.x);
+        Debug.Log(movement.y);
+        if (Input.GetKeyDown("left")) { tank.transform.eulerAngles =Vector3.forward * 90; }
+        if (Input.GetKeyDown("right")) { tank.transform.eulerAngles = Vector3.forward * - 90; }
+        if (Input.GetKeyDown("up")) { tank.transform.eulerAngles = Vector3.forward; }
+        if (Input.GetKeyDown("down")) { tank.transform.eulerAngles = Vector3.forward * -180; }
 
     }
 
@@ -45,5 +47,6 @@ public class player_move : MonoBehaviour
     {
         //movement
         rb.MovePosition(rb.position + movement * movespeed * Time.deltaTime);
+       
     }
 }
