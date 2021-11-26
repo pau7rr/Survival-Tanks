@@ -12,9 +12,9 @@ public class player_move : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;
     //public Animator animator;
-    public Tilemap eventos;
-    public GameObject camara;
-    public LayerMask encuentros;
+    public Transform spawnbala;
+    public GameObject bala;
+    public float bulledspeed = 20f;
     public BoxCollider2D box;
     public GameObject tank;
     public Vector3 offset = new Vector3(0, 0, 1);
@@ -34,15 +34,28 @@ public class player_move : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         //Debug.Log(movement.x);
-        Debug.Log(movement.y);
-        if (Input.GetKeyDown("left")) { tank.transform.eulerAngles =Vector3.forward * 90; }
-        if (Input.GetKeyDown("right")) { tank.transform.eulerAngles = Vector3.forward * - 90; }
-        if (Input.GetKeyDown("up")) { tank.transform.eulerAngles = Vector3.forward; }
-        if (Input.GetKeyDown("down")) { tank.transform.eulerAngles = Vector3.forward * -180; }
+        //diagonal arriba
+        if (movement.y == 1 && movement.x == -1) { tank.transform.eulerAngles = Vector3.forward * 50; }
+        if (movement.y == 1 && movement.x == 1) { tank.transform.eulerAngles = Vector3.forward * -50; }
+        //diagonal abajo
+        if (movement.y == -1 && movement.x == -1) { tank.transform.eulerAngles = Vector3.forward * 125; }
+        if (movement.y == -1 && movement.x == 1) { tank.transform.eulerAngles = Vector3.forward * -125; }
+        //abajo y arriba
+        if (movement.y == 1 && movement.x == 0) { tank.transform.eulerAngles = Vector3.forward; }
+        if (movement.y == -1 && movement.x == 0) { tank.transform.eulerAngles = Vector3.forward * -180; }
+        //izquierda y derecha
+        if (movement.y == 0 && movement.x == 1) { tank.transform.eulerAngles = Vector3.forward * -90; }
+        if (movement.y == 0 && movement.x == -1) { tank.transform.eulerAngles = Vector3.forward * 90; }
+
+           if (Input.GetKeyDown("space")) {disparar(); }
 
     }
 
-
+    void disparar() {
+       GameObject balaspawned =  Instantiate(bala, spawnbala.position, spawnbala.rotation);
+        Rigidbody2D cuerpo = balaspawned.GetComponent<Rigidbody2D>();
+        cuerpo.AddForce(spawnbala.up * bulledspeed, ForceMode2D.Impulse);
+    }
     void FixedUpdate()
     {
         //movement
