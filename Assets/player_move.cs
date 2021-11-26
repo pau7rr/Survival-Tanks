@@ -11,16 +11,17 @@ public class player_move : MonoBehaviour
     public float movespeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
-    public Animator animator;
+    //public Animator animator;
     public Tilemap eventos;
     public GameObject camara;
     public LayerMask encuentros;
     public BoxCollider2D box;
     private void Start()
     {
-       
+
         //if (hud2.carga == 0) { hud2.carga = 1; SceneManager.LoadScene(3); }
-       
+       // rb.constraints = (RigidbodyConstraints2D)RigidbodyConstraints.FreezeRotation;
+        rb.freezeRotation = true;
 
     }
     // Update is called once per frame
@@ -32,9 +33,9 @@ public class player_move : MonoBehaviour
         movement.y = Input.GetAxisRaw("Vertical");
 
         //pasarlo al animador
-        animator.SetFloat("horizontal", movement.x);
-        animator.SetFloat("vertical", movement.y);
-        animator.SetFloat("speed", movement.sqrMagnitude);
+       // animator.SetFloat("horizontal", movement.x);
+       // animator.SetFloat("vertical", movement.y);
+        //animator.SetFloat("speed", movement.sqrMagnitude);
 
 
     }
