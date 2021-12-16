@@ -173,7 +173,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.9058824, g: 0.6509804, b: 0.34901962, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -190,7 +190,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.289423
+  orthographic size: 11.182582
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10329,11 +10329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 5
   rb: {fileID: 2018473032}
-  eventos: {fileID: 0}
-  camara: {fileID: 519420028}
-  encuentros:
-    serializedVersion: 2
-    m_Bits: 0
+  spawnbala: {fileID: 0}
+  bala: {fileID: 5017137088148549209, guid: d8bfdb02b513d024fbdb387a8e8f502a, type: 3}
+  bulledspeed: 20
   box: {fileID: 2018473033}
   tank: {fileID: 2018473030}
   offset: {x: 0, y: 0, z: 1}
