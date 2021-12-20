@@ -21,8 +21,6 @@ public class player_move : MonoBehaviour
     private void Start()
     {
 
-        //if (hud2.carga == 0) { hud2.carga = 1; SceneManager.LoadScene(3); }
-       // rb.constraints = (RigidbodyConstraints2D)RigidbodyConstraints.FreezeRotation;
         rb.freezeRotation = true;
 
     }
