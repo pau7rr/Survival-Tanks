@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 5026047321314713886}
   - component: {fileID: 5026047321314713887}
   - component: {fileID: 5026047321314713873}
+  - component: {fileID: -7027029398760942677}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -274,6 +275,20 @@ MonoBehaviour:
   box: {fileID: 5026047321314713887}
   tank: {fileID: 412424679727231091}
   offset: {x: 0, y: 0, z: 1}
+--- !u!114 &-7027029398760942677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412424679727231091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7a8a58fc6e016b439025e94c9397b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+  barraDeVida: {fileID: 0}
 --- !u!1 &412424679932627927
 GameObject:
   m_ObjectHideFlags: 0

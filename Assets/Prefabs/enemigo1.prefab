@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8228167123690810032}
   - component: {fileID: 8228167123690809999}
   - component: {fileID: 8228167123690809998}
+  - component: {fileID: 2265179557586644553}
   m_Layer: 0
   m_Name: enemigo1
   m_TagString: Enemigo
@@ -139,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.028935552}
+  m_Offset: {x: 0.0041952133, y: 0.007956743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -150,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.27316, y: 2.3310316}
+  m_Size: {x: 2.1137218, y: 2.121244}
   m_EdgeRadius: 0
 --- !u!114 &8228167123690809998
 MonoBehaviour:
@@ -170,6 +171,27 @@ MonoBehaviour:
   jugador: {fileID: 0}
   bulledspeed: 20
   spawnbala: {fileID: 8228167125693068505}
+--- !u!50 &2265179557586644553
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228167123690809997}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8228167124247248142
 GameObject:
   m_ObjectHideFlags: 0
