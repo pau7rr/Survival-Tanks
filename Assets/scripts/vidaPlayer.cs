@@ -19,7 +19,7 @@ public class vidaPlayer : MonoBehaviour
     { // declarar valor de la vida, minimo y maximo
 
         barraDeVida.fillAmount = Mathf.Clamp(vida / 100, 0, 1f);
-    Debug.LogWarning(vida);
+        if (vida <= 0) { Destroy(this.gameObject); }
     }
 
 }

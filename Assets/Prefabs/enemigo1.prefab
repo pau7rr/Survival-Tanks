@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8228167123690809999}
   - component: {fileID: 8228167123690809998}
   - component: {fileID: 2265179557586644553}
+  - component: {fileID: -1700233395413378912}
   m_Layer: 0
   m_Name: enemigo1
   m_TagString: Enemigo
@@ -87,7 +88,7 @@ MonoBehaviour:
   radius: 2
   height: 2
   canMove: 1
-  maxSpeed: 2
+  maxSpeed: 2.3
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -111,7 +112,7 @@ MonoBehaviour:
   endReachedDistance: 5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!114 &8228167123690810032
 MonoBehaviour:
@@ -171,6 +172,8 @@ MonoBehaviour:
   jugador: {fileID: 0}
   bulledspeed: 20
   spawnbala: {fileID: 8228167125693068505}
+  spawnbala2: {fileID: 0}
+  disparodoble: 0
 --- !u!50 &2265179557586644553
 Rigidbody2D:
   serializedVersion: 4
@@ -192,6 +195,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1700233395413378912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228167123690809997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee941d46dac87b9489c9c331bb7d2674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+  tipoE: 1
 --- !u!1 &8228167124247248142
 GameObject:
   m_ObjectHideFlags: 0

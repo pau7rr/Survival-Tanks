@@ -5,14 +5,15 @@ using UnityEngine;
 
 public class bala : MonoBehaviour
 {
+    public float dmg = 20;
     public TextMeshProUGUI textoRondas;
     // Start is called before the first frame update
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
         if (collision.gameObject.tag.Equals("Enemigo")) {
-            Destroy(collision.gameObject);
-            
-}
+            collision.gameObject.GetComponent<vidaEnemigo>().vida -= dmg;
+
+        }
     }
 }

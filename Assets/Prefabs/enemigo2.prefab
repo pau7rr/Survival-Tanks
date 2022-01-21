@@ -618,6 +618,7 @@ GameObject:
   - component: {fileID: 832229940490045763}
   - component: {fileID: 4327431707552363875}
   - component: {fileID: 1040769914987371722}
+  - component: {fileID: -5279012346691193143}
   m_Layer: 0
   m_Name: enemigo2
   m_TagString: Enemigo
@@ -716,7 +717,7 @@ MonoBehaviour:
   endReachedDistance: 5
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!114 &832229940490045763
 MonoBehaviour:
@@ -770,12 +771,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14e6867e7011574ca841ecc09311682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoentredisparos: 1.5
+  tiempoentredisparos: 1.3
   bala: {fileID: 5017137088148549209, guid: d6863f609045e5d49a5f7a8a73ea8c43, type: 3}
-  start_tiempoentredisparos: 1.5
+  start_tiempoentredisparos: 1.3
   jugador: {fileID: 0}
   bulledspeed: 15
   spawnbala: {fileID: 1650997023062940631}
+  spawnbala2: {fileID: 0}
+  disparodoble: 0
+--- !u!114 &-5279012346691193143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2174239610254491715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee941d46dac87b9489c9c331bb7d2674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+  tipoE: 2
 --- !u!1 &3709803254354879320
 GameObject:
   m_ObjectHideFlags: 0

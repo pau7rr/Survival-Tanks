@@ -596,6 +596,7 @@ GameObject:
   - component: {fileID: 4590609997221491267}
   - component: {fileID: 7517748942541189665}
   - component: {fileID: 901631380596182462}
+  - component: {fileID: 6540982512088829787}
   m_Layer: 0
   m_Name: BossTank
   m_TagString: Enemigo
@@ -760,6 +761,20 @@ MonoBehaviour:
   spawnbala2: {fileID: 6034677621360449222}
   spawnbala3: {fileID: 1654182628875731486}
   spawnbala4: {fileID: 0}
+--- !u!114 &6540982512088829787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7073275846901866723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee941d46dac87b9489c9c331bb7d2674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vida: 100
+  tipoE: 0
 --- !u!1 &7073275846950524767
 GameObject:
   m_ObjectHideFlags: 0

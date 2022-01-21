@@ -5,20 +5,25 @@ using UnityEngine;
 
 public class Rondas : MonoBehaviour
 {
+    //SPAWNS
     public Transform spawnpoint;
     public Transform spawnpoint1;
     public Transform spawnpoint2;
-    public GameObject enemigo1;
-    public GameObject Boss;
+    //VARIABLES
     private int ronda = 1;
     private int spawns = 0;
     private int maxSpawns = 0;
     private int maxenemigos = 3;
     private GameObject[] enemigos;
-    private int contenemigos;
     public TextMeshProUGUI textoRondas;
     public TextMeshProUGUI textoEnemigo;
+    //ENEMIGOS
+    public GameObject Boss;
+    public GameObject enemigo1;
     public GameObject enemigo2;
+    public GameObject enemigo3;
+    //PLAYER
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +31,7 @@ public class Rondas : MonoBehaviour
         Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
          Instantiate(enemigo1, spawnpoint2.position, spawnpoint2.rotation);
         Instantiate(enemigo1, spawnpoint.position, spawnpoint.rotation);
-        Debug.LogWarning("spawned");
+        player =GameObject.FindGameObjectWithTag("Player"); 
     }
 
     // Update is called once per frame
@@ -43,6 +48,8 @@ public class Rondas : MonoBehaviour
     }
 
     void passarRonda() {
+        player.GetComponent<vidaPlayer>().vida += 15;
+        if (player.GetComponent<vidaPlayer>().vida >= 100) { player.GetComponent<vidaPlayer>().vida = 100; }
         ronda = ronda + 1;
         textoRondas.text = "Round" + ronda;
         spawns = 0;
@@ -67,6 +74,17 @@ public class Rondas : MonoBehaviour
             Instantiate(Boss, spawnpoint1.position, spawnpoint1.rotation);
             
         }
+
+
+        if (ronda >= 6)
+        {
+
+            Instantiate(enemigo2, spawnpoint1.position, spawnpoint1.rotation);
+            Instantiate(enemigo2, spawnpoint2.position, spawnpoint2.rotation);
+            Instantiate(enemigo3, spawnpoint.position, spawnpoint.rotation);
+
+        }
+
     }
 
     void Spawn()
@@ -85,6 +103,13 @@ public class Rondas : MonoBehaviour
             Instantiate(enemigo2, spawnpoint1.position, spawnpoint1.rotation);
             Instantiate(enemigo1, spawnpoint2.position, spawnpoint2.rotation);
             Instantiate(enemigo2, spawnpoint.position, spawnpoint.rotation);
+        }
+
+        if (ronda >= 6)
+        {
+            Instantiate(enemigo2, spawnpoint1.position, spawnpoint1.rotation);
+            Instantiate(enemigo2, spawnpoint2.position, spawnpoint2.rotation);
+            Instantiate(enemigo3, spawnpoint.position, spawnpoint.rotation);
         }
 
     }
