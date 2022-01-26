@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4892575489865434367
+--- !u!1 &7688871950277891342
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4892575489865434361}
-  - component: {fileID: 4892575489865434366}
+  - component: {fileID: 7688871950277891336}
+  - component: {fileID: 7688871950277891343}
   m_Layer: 0
   m_Name: rondas
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4892575489865434361
+--- !u!4 &7688871950277891336
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4892575489865434367}
+  m_GameObject: {fileID: 7688871950277891342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.7, y: 34.1, z: -7.121216}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4892575489865434366
+--- !u!114 &7688871950277891343
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4892575489865434367}
+  m_GameObject: {fileID: 7688871950277891342}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b39834bbe752b604e8f54bae41afecf4, type: 3}
@@ -46,7 +46,10 @@ MonoBehaviour:
   spawnpoint: {fileID: 0}
   spawnpoint1: {fileID: 0}
   spawnpoint2: {fileID: 0}
-  enemigo1: {fileID: 8228167123690809997, guid: 36d856d1afe1e4c4eadbe702f2780a0e, type: 3}
   textoRondas: {fileID: 0}
   textoEnemigo: {fileID: 0}
-  enemigo2: {fileID: 8619293927685431858, guid: 127ac89f603b8b4428597d9ff3d88f9a, type: 3}
+  Boss: {fileID: 7073275846901866723, guid: ef1e275175373944092c9581ca152e0b, type: 3}
+  enemigo1: {fileID: 8228167123690809997, guid: 36d856d1afe1e4c4eadbe702f2780a0e, type: 3}
+  enemigo2: {fileID: 2174239610254491715, guid: e6257a63c36df1a46ae0d412e9207039, type: 3}
+  enemigo3: {fileID: 8228167123690809997, guid: 744bba3c096fd0b419ce4cf2cf3aed2f, type: 3}
+  player: {fileID: 0}

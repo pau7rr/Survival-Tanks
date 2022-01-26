@@ -40,6 +40,11 @@ public class Pause_menu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
 
+    public void Salir()
+    {
+
+        SceneManager.LoadScene(1);
+    }
     public void Resume() {
         pausemenu.SetActive(false);
         Time.timeScale = 1f;
