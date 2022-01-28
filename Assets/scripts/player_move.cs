@@ -19,17 +19,17 @@ public class player_move : MonoBehaviour
 
     bool moveForward = false;
     bool moveReverse = false;
-    float moveSpeed = 1f;
-    float moveSpeedReverse = 0f;
-    float moveAcceleration = 0.1f;
-    float moveDeceleration = 0.20f;
-    float moveSpeedMax = 2.5f;
+    float moveSpeed = 3f;
+    float moveSpeedReverse = 2f;
+    float moveAcceleration = 3f;
+    float moveDeceleration = 0.10f;
+    float moveSpeedMax =3f;
 
     bool rotateRight = false;
     bool rotateLeft = false;
     float rotateSpeedRight = 0f;
     float rotateSpeedLeft = 0f;
-    float rotateAcceleration = 4f;
+    float rotateAcceleration = 6f;
     float rotateDeceleration = 10f;
     float rotateSpeedMax = 130f;
 
@@ -148,13 +148,13 @@ public class player_move : MonoBehaviour
 
     void trackStart()
     {
-       // trackLeft.animator.SetBool("isMoving", true);
-       // trackRight.animator.SetBool("isMoving", true);
+       trackLeft.animator.SetBool("isMoving", true);
+       trackRight.animator.SetBool("isMoving", true);
     }
 
     void trackStop()
     {
-       // trackLeft.animator.SetBool("isMoving", false);
-       // trackRight.animator.SetBool("isMoving", false);
+       trackLeft.animator.SetBool("isMoving", false);
+        trackRight.animator.SetBool("isMoving", false);
     }
 }

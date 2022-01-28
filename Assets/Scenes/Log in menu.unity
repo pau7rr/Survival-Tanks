@@ -3200,6 +3200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c36f112576c941438c953fe42b6e9c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  user: {fileID: 1781292262}
+  "contrase\xF1a": {fileID: 429101731}
 --- !u!4 &949635645
 Transform:
   m_ObjectHideFlags: 0
