@@ -5,10 +5,11 @@ using UnityEngine;
 public class coin : MonoBehaviour
 {
     public AudioSource coinsound;
+    public GameObject sonidos;
     // Start is called before the first frame update
     void Start()
     {
-        
+     sonidos = GameObject.FindGameObjectWithTag("Sonidos")  
     }
 
     // Update is called once per frame
@@ -20,7 +21,6 @@ public class coin : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            Debug.LogWarning("d");
             coinsound.Play();
             Destroy(this.gameObject);
             col.GetComponent<vidaPlayer>().monedas += 1;
