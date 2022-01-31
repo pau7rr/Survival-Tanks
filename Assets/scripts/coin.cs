@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class coin : MonoBehaviour
 {
+    public AudioSource dineuro;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,12 @@ public class coin : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
+            dineuro.Play();
+           
             Destroy(this.gameObject);
             col.GetComponent<vidaPlayer>().monedas += 1;
+
         }
     }
+
 }
