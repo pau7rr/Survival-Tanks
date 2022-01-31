@@ -7,7 +7,7 @@ public class Pause_menu : MonoBehaviour
 {
     public static bool Gamepause = false;
     public GameObject pausemenu;
-    public GameObject player;
+    private GameObject player;
     // Start is called before the first frame update
     void Start()
     {

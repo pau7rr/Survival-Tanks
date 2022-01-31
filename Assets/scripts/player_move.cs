@@ -141,9 +141,8 @@ public class player_move : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //movement
-       // rb.MovePosition(rb.position + movement * movespeed * Time.deltaTime);
-       
+        //movement  
+
     }
 
     void trackStart()
