@@ -48,7 +48,7 @@ public class Rondas : MonoBehaviour
     }
 
     void passarRonda() {
-        player.GetComponent<vidaPlayer>().vida += 15;
+        player.GetComponent<vidaPlayer>().vida += 25;
         if (player.GetComponent<vidaPlayer>().vida >= 100) { player.GetComponent<vidaPlayer>().vida = 100; }
         ronda = ronda + 1;
         textoRondas.text = "Round" + ronda;
@@ -69,14 +69,9 @@ public class Rondas : MonoBehaviour
         }
 
 
-        if (ronda == 5)
-        {
-            Instantiate(Boss, spawnpoint1.position, spawnpoint1.rotation);
-            
-        }
 
 
-        if (ronda >= 6)
+        if (ronda <= 9 && ronda > 6)
         {
 
             Instantiate(enemigo2, spawnpoint1.position, spawnpoint1.rotation);
@@ -84,6 +79,41 @@ public class Rondas : MonoBehaviour
             Instantiate(enemigo3, spawnpoint.position, spawnpoint.rotation);
 
         }
+
+        if (ronda > 11)
+        {
+
+            Instantiate(enemigo2, spawnpoint1.position, spawnpoint1.rotation);
+            Instantiate(enemigo2, spawnpoint2.position, spawnpoint2.rotation);
+            Instantiate(enemigo3, spawnpoint.position, spawnpoint.rotation);
+
+        }
+        //Boss
+        if (ronda == 5)
+        {
+            Instantiate(Boss, spawnpoint1.position, spawnpoint1.rotation);
+
+        }
+
+
+        if (ronda == 10)
+        {
+            Instantiate(Boss, spawnpoint1.position, spawnpoint1.rotation);
+
+        }
+
+
+        if (ronda == 15)
+        {
+            Instantiate(Boss, spawnpoint1.position, spawnpoint1.rotation);
+
+        }
+        if (ronda == 20)
+        {
+            Instantiate(Boss, spawnpoint1.position, spawnpoint1.rotation);
+            Instantiate(Boss, spawnpoint2.position, spawnpoint2.rotation);
+        }
+
 
     }
 

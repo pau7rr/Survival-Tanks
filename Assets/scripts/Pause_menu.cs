@@ -38,6 +38,7 @@ public class Pause_menu : MonoBehaviour
     {
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        
     }
 
     public void Salir()

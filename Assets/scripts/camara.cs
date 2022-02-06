@@ -23,4 +23,13 @@ public class camara : MonoBehaviour
                 ) ;
         }
     }
+
+    private void Update()
+    {
+        transform.position = new Vector3(
+            Mathf.Clamp(player.transform.position.x, -0.2f, -46f),
+            Mathf.Clamp(player.transform.position.y, -58, 35f),
+            -100
+            );
+    }
 }

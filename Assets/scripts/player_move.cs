@@ -16,14 +16,15 @@ public class player_move : MonoBehaviour
     public string keyMoveReverse;
     public string keyRotateRight;
     public string keyRotateLeft;
-
+    public AimTurret aimTurret;
+    //public Turret[] turrets;
     bool moveForward = false;
     bool moveReverse = false;
-    float moveSpeed = 3f;
-    float moveSpeedReverse = 2f;
-    float moveAcceleration = 3f;
+    float moveSpeed = 4f;
+    float moveSpeedReverse = 3f;
+    float moveAcceleration = 4f;
     float moveDeceleration = 0.10f;
-    float moveSpeedMax =3f;
+    float moveSpeedMax =4f;
 
     bool rotateRight = false;
     bool rotateLeft = false;
@@ -124,12 +125,14 @@ public class player_move : MonoBehaviour
         if (tiempoentredisparos <= 0)
         {
             if (Input.GetKeyDown("space")) { disparar(); }
-            
+            if (Input.GetKeyDown(KeyCode.Mouse0)) { disparar(); }
+           
         }
         else
         {
             tiempoentredisparos -= Time.deltaTime;
         }
+        //HandleTurretMovement(pointerPosition)
     }
 
     void disparar() {
@@ -139,17 +142,14 @@ public class player_move : MonoBehaviour
         cuerpo.AddForce(spawnbala.up * bulledspeed, ForceMode2D.Impulse);
         tiempoentredisparos = start_tiempoentredisparos;
     }
-    void FixedUpdate()
-    {
-        //movement  
-
-    }
-
+  
+    
     void trackStart()
     {
        trackLeft.animator.SetBool("isMoving", true);
        trackRight.animator.SetBool("isMoving", true);
     }
+
 
     void trackStop()
     {

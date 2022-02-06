@@ -533,7 +533,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.006898403, y: 0.013795376}
+  m_Offset: {x: 0.006898403, y: 0.006152034}
   m_SpriteTilingProperty:
     border: {x: 1.1999999, y: 0.96, z: 1.1999999, w: 1.02}
     pivot: {x: 0.5, y: 0.5}
@@ -544,7 +544,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0622416, y: 2.1312351}
+  m_Size: {x: 2.0622416, y: 2.0700877}
   m_EdgeRadius: 0
 --- !u!114 &2228146721802337194
 MonoBehaviour:
@@ -564,6 +564,7 @@ MonoBehaviour:
   keyMoveReverse: s
   keyRotateRight: d
   keyRotateLeft: a
+  aimTurret: {fileID: 0}
   disparo: {fileID: 6569604842277362416}
   movespeed: 5
   rb: {fileID: 2228146721802337189}
@@ -749,6 +750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6814745324057349199}
   - component: {fileID: 6814745324057349198}
+  - component: {fileID: 1099272006965149614}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -824,6 +826,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1099272006965149614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814745324057349184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f38ff722a0b7a5742831ea0086b272a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myPlayer: {fileID: 0}
 --- !u!1 &6814745325502047685
 GameObject:
   m_ObjectHideFlags: 0
