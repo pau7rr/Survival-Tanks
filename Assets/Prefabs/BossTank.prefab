@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee941d46dac87b9489c9c331bb7d2674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 200
+  vida: 280
   tipoE: 0
   moneda: {fileID: 0}
 --- !u!1 &7073275846950524767

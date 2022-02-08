@@ -11,11 +11,11 @@ public class vidaEnemigo : MonoBehaviour
     void Start()
     {
         //Boss
-        if (tipoE == 0) { vida = 100; }
+        if (tipoE == 0) { vida = 200; }
         //Enemigos
         if (tipoE == 1) { vida = 40; }
         if (tipoE == 2) { vida = 20; }
-        if (tipoE == 3) { vida = 60; }
+        if (tipoE == 3) { vida = 80; }
     }
 
     // Update is called once per frame

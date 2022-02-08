@@ -522,7 +522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5963898, y: -7.3258643, z: -10}
+  m_LocalPosition: {x: 10.010707, y: -7.5396214, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -915,6 +915,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1151889509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151889510}
+  m_Layer: 0
+  m_Name: Spawn 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1151889510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151889509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.2, y: 4.1, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1931355874}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1158540729
 GameObject:
   m_ObjectHideFlags: 0
@@ -10727,6 +10757,8 @@ Transform:
   - {fileID: 1984863868}
   - {fileID: 1415661887}
   - {fileID: 454436671}
+  - {fileID: 1151889510}
+  - {fileID: 2135418380}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10754,7 +10786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984863867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 2.6, y: 7.7, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1931355874}
@@ -10880,6 +10912,36 @@ Transform:
   - {fileID: 1158540730}
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2135418379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2135418380}
+  m_Layer: 0
+  m_Name: Spawn 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2135418380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135418379}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.9, y: -11.2, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1931355874}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4116944207428729645
 PrefabInstance:
@@ -11227,11 +11289,23 @@ PrefabInstance:
     - target: {fileID: 7688871950277891343, guid: 851f5f36bdf84b94d810844defe6301b, type: 3}
       propertyPath: spawnpoint1
       value: 
-      objectReference: {fileID: 1415661887}
+      objectReference: {fileID: 1984863868}
     - target: {fileID: 7688871950277891343, guid: 851f5f36bdf84b94d810844defe6301b, type: 3}
       propertyPath: spawnpoint2
       value: 
+      objectReference: {fileID: 1415661887}
+    - target: {fileID: 7688871950277891343, guid: 851f5f36bdf84b94d810844defe6301b, type: 3}
+      propertyPath: spawnpoint3
+      value: 
       objectReference: {fileID: 454436671}
+    - target: {fileID: 7688871950277891343, guid: 851f5f36bdf84b94d810844defe6301b, type: 3}
+      propertyPath: spawnpoint4
+      value: 
+      objectReference: {fileID: 1151889510}
+    - target: {fileID: 7688871950277891343, guid: 851f5f36bdf84b94d810844defe6301b, type: 3}
+      propertyPath: spawnpoint5
+      value: 
+      objectReference: {fileID: 2135418380}
     - target: {fileID: 7688871950277891343, guid: 851f5f36bdf84b94d810844defe6301b, type: 3}
       propertyPath: textoRondas
       value: 
