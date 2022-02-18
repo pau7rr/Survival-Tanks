@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
@@ -17,7 +18,6 @@ public class player_move : MonoBehaviour
     public string keyRotateRight;
     public string keyRotateLeft;
     public AimTurret aimTurret;
-    //public Turret[] turrets;
     bool moveForward = false;
     bool moveReverse = false;
     float moveSpeed = 4f;
@@ -33,8 +33,9 @@ public class player_move : MonoBehaviour
     float rotateAcceleration = 6f;
     float rotateDeceleration = 10f;
     float rotateSpeedMax = 130f;
-
-
+    //contador de balas y bombas
+    private GameObject[] balas;
+    public int bombas = 1;
     // variables
     public AudioSource disparo;
     public float movespeed = 5f;
@@ -50,21 +51,21 @@ public class player_move : MonoBehaviour
     //disparo
     public float start_tiempoentredisparos;
     public float tiempoentredisparos;
+    //EFECTOS
+    public GameObject bombaT;
+    public TextMeshProUGUI textoBombas;
     private void Start()
     {
         tiempoentredisparos = start_tiempoentredisparos;
         rb.freezeRotation = true;
+       
 
     }
     // Update is called once per frame
     void Update()
     {
-
-        //pillar imput
-       // movement.x = Input.GetAxisRaw("Horizontal");
-        //movement.y = Input.GetAxisRaw("Vertical");
-        //Debug.Log(movement.x);
-        //diagonal arriba
+        textoBombas.text = "Bombas: " + bombas;
+        if (bombas >= 1) { if (Input.GetKeyDown(KeyCode.E)) { Debug.LogWarning("e pressed"); fuckbalas(); } }
         rotateLeft = (Input.GetKeyDown(keyRotateLeft)) ? true : rotateLeft;
         rotateLeft = (Input.GetKeyUp(keyRotateLeft)) ? false : rotateLeft;
         if (rotateLeft)
@@ -121,7 +122,6 @@ public class player_move : MonoBehaviour
         {
             trackStop();
         }
-
         if (tiempoentredisparos <= 0)
         {
             if (Input.GetKeyDown("space")) { disparar(); }
@@ -156,4 +156,22 @@ public class player_move : MonoBehaviour
        trackLeft.animator.SetBool("isMoving", false);
         trackRight.animator.SetBool("isMoving", false);
     }
+
+
+    void fuckbalas()
+    {
+        Debug.LogWarning("bomba");
+        bombas -= 1;
+        GameObject bomba = Instantiate(bombaT, this.transform.position, bombaT.transform.rotation);
+        balas = GameObject.FindGameObjectsWithTag("bala");
+        foreach (var item in balas)
+        {
+
+            Debug.LogWarning("bombasfde");
+            Destroy(item);
+        }
+
+    }
+
+
 }

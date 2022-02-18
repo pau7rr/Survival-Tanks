@@ -577,6 +577,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 1}
   start_tiempoentredisparos: 0.4
   tiempoentredisparos: 0.4
+  bombaT: {fileID: 1927209853057304386, guid: 3953ad2d1e1be9b42a021287bf18bfcd, type: 3}
 --- !u!114 &4994796781853100304
 MonoBehaviour:
   m_ObjectHideFlags: 0

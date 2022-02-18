@@ -30,9 +30,12 @@ public class Rondas : MonoBehaviour
     void Start()
     {
         textoRondas.text = "Ronda: " + ronda;
-        Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
-         Instantiate(enemigo1, spawnpoint2.position, spawnpoint2.rotation);
-        Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
+       Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
+        Instantiate(enemigo1, spawnpoint2.position, spawnpoint2.rotation);
+         Instantiate(enemigo1, spawnpoint3.position, spawnpoint1.rotation);
+        //ESPERAR 1SEC TRAS RESPAWNEAR
+        
+
         player =GameObject.FindGameObjectWithTag("Player");
         inicioLista();
     }
@@ -46,7 +49,7 @@ public class Rondas : MonoBehaviour
         if (enemigos.Length == 0) {
             Debug.LogWarning(maxSpawns);
             reiniciolista();
-            if (spawns == maxSpawns) { passarRonda(); } else { Spawn(); }
+            if (spawns == maxSpawns) { passarRonda();} else { Spawn(); }
            
         }
     }
@@ -55,7 +58,9 @@ public class Rondas : MonoBehaviour
         player.GetComponent<vidaPlayer>().vida += 25;
         if (player.GetComponent<vidaPlayer>().vida >= 100) { player.GetComponent<vidaPlayer>().vida = 100; }
         ronda = ronda + 1;
-        textoRondas.text = "Round" + ronda;
+        //cada dos rondas dar una bomba
+         player.GetComponent<player_move>().bombas += 1; 
+            textoRondas.text = "Round" + ronda;
         spawns = 0;
         Debug.LogWarning("passo de ronda");
         if (ronda < 4) {
@@ -161,6 +166,7 @@ public class Rondas : MonoBehaviour
         spawnsList.Add(spawnpoint4);
         spawnsList.Add(spawnpoint5);
     }
+
 
     void Randomspawn() {
 

@@ -5,7 +5,9 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Web;
 public class LoginMenu : MonoBehaviour
 {
    // public InputField user;
@@ -25,10 +27,10 @@ public class LoginMenu : MonoBehaviour
 
     public void Login()
     {
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
         if (user.text != null && contraseña.text != null) {
             Debug.Log(user.text);
-            //StartCoroutine(CallLogin(user.text, contraseña.text));
+            StartCoroutine(CallLogin(user.text, contraseña.text));
             
         }
        
@@ -38,14 +40,17 @@ public class LoginMenu : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddField("email", User.TrimEnd('\u200b'));
         form.AddField("password", password.TrimEnd('\u200b'));
-        UnityWebRequest www = UnityWebRequest.Post("http://127.0.0.1:8000/api/login", form);
+        UnityWebRequest www = UnityWebRequest.Post("https://survival-tanks-api.herokuapp.com/api/login", form);
         yield return www.Send ();
+        
         if (www.error != null)
         {
             Debug.LogWarning("Error" + www.error);
         }
         else {
-            Debug.LogWarning("Response" + www.downloadHandler.text);
+            string respuesta = www.downloadHandler.text;
+            Debug.LogWarning(respuesta);
+            if (respuesta.Contains("\"success\":true")) { SceneManager.LoadScene(1); }
         }
 
     }
