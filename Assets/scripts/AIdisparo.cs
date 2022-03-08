@@ -33,7 +33,7 @@ public class AIdisparo : MonoBehaviour
         Vector3 viewPos = camara.WorldToViewportPoint(this.transform.position);
        
             if (viewPos.x <= 1 && viewPos.x >= 0 && viewPos.y <= 1 && viewPos.y >= 0) {
-            Debug.LogWarning("dispara");
+           
             if (tiempoentredisparos <= 0)
             {
                 if (!disparodoble)

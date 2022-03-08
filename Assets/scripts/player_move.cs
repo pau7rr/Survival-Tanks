@@ -4,11 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class player_move : MonoBehaviour
+public class player_move : MonoBehaviourPun
 {
 
-    
+    public PhotonView pv;
 
     public Track trackLeft;
     public Track trackRight;
@@ -17,14 +18,14 @@ public class player_move : MonoBehaviour
     public string keyMoveReverse;
     public string keyRotateRight;
     public string keyRotateLeft;
-    public AimTurret aimTurret;
+    //public AimTurret aimTurret;
     bool moveForward = false;
     bool moveReverse = false;
-    float moveSpeed = 4f;
+    float moveSpeed = TankStats.speed;
     float moveSpeedReverse = 3f;
     float moveAcceleration = 4f;
     float moveDeceleration = 0.10f;
-    float moveSpeedMax =4f;
+    float moveSpeedMax = TankStats.speed;
 
     bool rotateRight = false;
     bool rotateLeft = false;
@@ -38,7 +39,7 @@ public class player_move : MonoBehaviour
     public int bombas = 1;
     // variables
     public AudioSource disparo;
-    public float movespeed = 5f;
+    //public float movespeed = 5f;
     public Rigidbody2D rb;
     Vector2 movement;
     public Animator animator;
@@ -54,16 +55,19 @@ public class player_move : MonoBehaviour
     //EFECTOS
     public GameObject bombaT;
     public TextMeshProUGUI textoBombas;
-    private void Start()
+     void Start()
     {
         tiempoentredisparos = start_tiempoentredisparos;
         rb.freezeRotation = true;
        
 
     }
+
+   
     // Update is called once per frame
     void Update()
     {
+        //bombas
         textoBombas.text = "Bombas: " + bombas;
         if (bombas >= 1) { if (Input.GetKeyDown(KeyCode.E)) { Debug.LogWarning("e pressed"); fuckbalas(); } }
         rotateLeft = (Input.GetKeyDown(keyRotateLeft)) ? true : rotateLeft;

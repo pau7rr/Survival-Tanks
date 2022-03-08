@@ -1,16 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class TankPlayer : MonoBehaviour
+[Serializable]
+public class TankPlayer 
 {
-    private int fuerza;
-    private int vida;
-    private int velocidad;
-    private string torre;
-    private string cuerpo;
-    private string ruedas;
-    private string balas;
+    public int strengh;
+    public int health;
+    public int speed;
+    public string tower;
+    public string body;
+    public string track;
+    public string bullet;
+    public string token;
+    //public string bullet;
     // Start is called before the first frame update
     void Start()
     {

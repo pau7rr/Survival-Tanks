@@ -21,6 +21,7 @@ public class vidaEnemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (vida <= 0) { Destroy(this.gameObject);
            Instantiate(moneda, this.transform.position, moneda.transform.rotation);
         }

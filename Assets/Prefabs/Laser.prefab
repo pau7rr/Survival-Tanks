@@ -144,6 +144,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71e50a2be8e89fc49882071905383965, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 20
+  dmg: 0
   textoRondas: {fileID: 0}
-  moneda: {fileID: 1399405642781997018, guid: 04643bf817155d04c84ac2534b913e90, type: 3}

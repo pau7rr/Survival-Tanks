@@ -33,9 +33,10 @@ public class Apicall : MonoBehaviour
         {
             string respuesta = request.downloadHandler.text;
             Debug.LogWarning(respuesta);
-           // TankPlayer tank = new TankPlayer;
-            TankPlayer tank = JsonUtility.FromJson<TankPlayer>(respuesta);
+            TankPlayer tank = new TankPlayer();
+             tank = JsonUtility.FromJson<TankPlayer>(respuesta);
             Debug.LogWarning(tank);
+            Debug.LogWarning("d");
         }
 
     }

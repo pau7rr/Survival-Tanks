@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class bala : MonoBehaviour
 {
-    public float dmg = 20;
+    private float dmg = TankStats.strengh;
     public TextMeshProUGUI textoRondas;
     
     // Start is called before the first frame update
@@ -13,8 +13,8 @@ public class bala : MonoBehaviour
     {
         Destroy(gameObject);
         if (collision.gameObject.tag.Equals("Enemigo")) {
-            collision.gameObject.GetComponent<vidaEnemigo>().vida -= dmg; 
-
+            collision.gameObject.GetComponent<vidaEnemigo>().vida -= dmg;
+            Debug.LogWarning(dmg);
         }
     }
 }

@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/SelecionMapa.unity
     guid: a6a3c25ac10ac2346b3d997735a18bc3
   - enabled: 0
-    path: Assets/Scenes/Selecion_Mapa.unity
-    guid: d77c8ead12fa8d647a9ccc07dcd73893
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Desierto.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -29,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bosque 1.unity
     guid: 08d7c038341f8274baffae9f72dc6b4d
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/busqueda.unity
+    guid: f58d216f6274c9848af7d61f5235f756
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/Desierto_Multi.unity
+    guid: a5e889606bb9f6d419221d0b4200f2e9
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/Prueba.unity
+    guid: 94f4cd15cc02a3a46b8db0ba8c3d7365
   m_configObjects: {}

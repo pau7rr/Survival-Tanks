@@ -519,7 +519,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2228146721802337188
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -558,15 +558,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f8975a700860cd48a9fda5ef349a63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pv: {fileID: 0}
   trackLeft: {fileID: 4383972686011202085}
   trackRight: {fileID: 1245933165369356837}
   keyMoveForward: w
   keyMoveReverse: s
   keyRotateRight: d
   keyRotateLeft: a
-  aimTurret: {fileID: 0}
+  bombas: 1
   disparo: {fileID: 6569604842277362416}
-  movespeed: 5
   rb: {fileID: 2228146721802337189}
   animator: {fileID: 0}
   spawnbala: {fileID: 5652485502646698654}
@@ -578,6 +578,7 @@ MonoBehaviour:
   start_tiempoentredisparos: 0.4
   tiempoentredisparos: 0.4
   bombaT: {fileID: 1927209853057304386, guid: 3953ad2d1e1be9b42a021287bf18bfcd, type: 3}
+  textoBombas: {fileID: 0}
 --- !u!114 &4994796781853100304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,7 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7a8a58fc6e016b439025e94c9397b4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vida: 100
+  vida: 10
   monedas: 0
   textomonedas: {fileID: 0}
   barraDeVida: {fileID: 0}
