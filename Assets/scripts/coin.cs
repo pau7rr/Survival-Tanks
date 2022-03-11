@@ -8,7 +8,7 @@ public class coin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(Destroycoin());
     }
 
     // Update is called once per frame
@@ -26,4 +26,14 @@ public class coin : MonoBehaviour
             col.GetComponent<vidaPlayer>().monedas += 1;
         }
     }
+
+    public IEnumerator Destroycoin()
+    {
+
+        yield return new WaitForSeconds(13f);
+        Destroy(this.gameObject);
+        
+
+    }
+
 }

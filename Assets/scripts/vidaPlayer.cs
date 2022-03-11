@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class vidaPlayer : MonoBehaviour
@@ -22,7 +23,7 @@ public class vidaPlayer : MonoBehaviour
     { // declarar valor de la vida, minimo y maximo
         textomonedas.text = ""+monedas;
         barraDeVida.fillAmount = Mathf.Clamp(vida / TankStats.health, 0, 1f);
-        if (vida <= 0) { Destroy(this.gameObject); StartCoroutine(mandarMonedas()); }
+        if (vida <= 0) { Destroy(this.gameObject); StartCoroutine(mandarMonedas()); SceneManager.LoadScene(1); }
     }
 
 
@@ -43,7 +44,7 @@ public class vidaPlayer : MonoBehaviour
         {
             string respuesta = www.downloadHandler.text;
             Debug.LogWarning(respuesta);
-            
+            yield return  new WaitForSeconds(4f);
         }
 
     }

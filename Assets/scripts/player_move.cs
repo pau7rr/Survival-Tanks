@@ -21,11 +21,11 @@ public class player_move : MonoBehaviourPun
     //public AimTurret aimTurret;
     bool moveForward = false;
     bool moveReverse = false;
-    float moveSpeed = TankStats.speed;
+    float moveSpeed = TankStats.speed + 1;
     float moveSpeedReverse = 3f;
     float moveAcceleration = 4f;
     float moveDeceleration = 0.10f;
-    float moveSpeedMax = TankStats.speed;
+    float moveSpeedMax = TankStats.speed + 1;
 
     bool rotateRight = false;
     bool rotateLeft = false;
