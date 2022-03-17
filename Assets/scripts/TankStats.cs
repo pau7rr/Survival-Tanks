@@ -18,7 +18,7 @@ public class TankStats
     static private int kills;
     static private int disparos;
     static private int disparosAcertados;
-    static private int tiempoPartida;
+    static private float tiempoPartida;
 
 
     // Start is called before the first frame update
@@ -31,9 +31,9 @@ public class TankStats
     public void sumardisparoAcertado() { disparosAcertados += 1; }
     public void sumarKill() { kills += 1; }
 
-    public void settiempoP(int tiempo) { tiempoPartida = tiempo; }
+    public void settiempoP(float tiempo) { tiempoPartida = tiempo; }
 
-    public int getTiempo() { return tiempoPartida; }
+    public float getTiempo() { return tiempoPartida; }
 
     public int getKills() { return kills; }
     public int getDisparos() { return disparos; }

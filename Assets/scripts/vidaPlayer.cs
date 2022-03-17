@@ -14,8 +14,7 @@ public class vidaPlayer : MonoBehaviour
     public TextMeshProUGUI textomonedas;
     public Image barraDeVida;
     //contador
-    private float timer;
-    private int minutos;
+    private float minutos;
     TankStats ts = new TankStats();
     void Start()
     {
@@ -28,18 +27,9 @@ public class vidaPlayer : MonoBehaviour
     { // declarar valor de la vida, minimo y maximo
         textomonedas.text = ""+monedas;
         barraDeVida.fillAmount = Mathf.Clamp(vida / TankStats.health, 0, 1f);
-        if (vida <= 0) {  StartCoroutine(mandarMonedas()); ts.settiempoP(minutos); StartCoroutine(mandarstats()); Destroy(this.gameObject); }
+        if (vida <= 0) {  StartCoroutine(mandarMonedas()); ts.settiempoP(Time.timeSinceLevelLoad); StartCoroutine(mandarstats()); Destroy(this.gameObject); }
 
-        //Contar minutos
-
-        do
-        {
-            timer += Time.deltaTime;
-            if ((int)timer % 60 == 0)
-            {
-                minutos += 1;
-            }
-        } while (vida >=0);
+     
 
     }
 
@@ -71,10 +61,10 @@ public class vidaPlayer : MonoBehaviour
         form.AddField("user_id", TankStats.id);
         form.AddField("round", GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas());
         form.AddField("kills", ts.getKills());
-        form.AddField("time_played", ts.getTiempo());
+        form.AddField("time_played", (int)ts.getTiempo() );
         form.AddField("shots", ts.getDisparos());
         form.AddField("successful_shots", ts.getDisparosAcertados());
-        UnityWebRequest www = UnityWebRequest.Post("https://survival-tanks-api.herokuapp.com/api/user/updateSoloStats", form);
+        UnityWebRequest www = UnityWebRequest.Post("https://survival-tanks-api.herokuapp.com/api/updateSoloStats", form);
         www.SetRequestHeader("Authorization", "Bearer " + TankStats.token);
         yield return www.Send();
 
