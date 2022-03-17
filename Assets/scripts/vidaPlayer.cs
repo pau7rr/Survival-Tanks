@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -12,6 +13,10 @@ public class vidaPlayer : MonoBehaviour
     public int monedas = 0;
     public TextMeshProUGUI textomonedas;
     public Image barraDeVida;
+    //contador
+    private float timer;
+    private int minutos;
+    TankStats ts = new TankStats();
     void Start()
     {
         vida = TankStats.health;
@@ -23,7 +28,19 @@ public class vidaPlayer : MonoBehaviour
     { // declarar valor de la vida, minimo y maximo
         textomonedas.text = ""+monedas;
         barraDeVida.fillAmount = Mathf.Clamp(vida / TankStats.health, 0, 1f);
-        if (vida <= 0) { Destroy(this.gameObject); StartCoroutine(mandarMonedas()); SceneManager.LoadScene(1); }
+        if (vida <= 0) {  StartCoroutine(mandarMonedas()); ts.settiempoP(minutos); StartCoroutine(mandarstats()); Destroy(this.gameObject); }
+
+        //Contar minutos
+
+        do
+        {
+            timer += Time.deltaTime;
+            if ((int)timer % 60 == 0)
+            {
+                minutos += 1;
+            }
+        } while (vida >=0);
+
     }
 
 
@@ -43,8 +60,32 @@ public class vidaPlayer : MonoBehaviour
         else
         {
             string respuesta = www.downloadHandler.text;
+            Debug.LogWarning(respuesta);            
+        }
+
+    }
+
+    public IEnumerator mandarstats()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("user_id", TankStats.id);
+        form.AddField("round", GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas());
+        form.AddField("kills", ts.getKills());
+        form.AddField("time_played", ts.getTiempo());
+        form.AddField("shots", ts.getDisparos());
+        form.AddField("successful_shots", ts.getDisparosAcertados());
+        UnityWebRequest www = UnityWebRequest.Post("https://survival-tanks-api.herokuapp.com/api/user/updateSoloStats", form);
+        www.SetRequestHeader("Authorization", "Bearer " + TankStats.token);
+        yield return www.Send();
+
+        if (www.error != null)
+        {
+            Debug.LogWarning("Error" + www.error);
+        }
+        else
+        {
+            string respuesta = www.downloadHandler.text;
             Debug.LogWarning(respuesta);
-            yield return  new WaitForSeconds(4f);
         }
 
     }

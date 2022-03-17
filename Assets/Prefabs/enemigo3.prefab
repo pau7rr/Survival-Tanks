@@ -758,14 +758,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8228167123690809997}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee941d46dac87b9489c9c331bb7d2674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
   tipoE: 3
-  moneda: {fileID: 0}
+  moneda: {fileID: 1399405642781997018, guid: 04643bf817155d04c84ac2534b913e90, type: 3}
 --- !u!114 &-4428930635369786590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,11 +803,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.744951}
-      - {x: -1.0307593, y: 0.53218484}
+    - - {x: 0.41652077, y: 0.55979395}
+      - {x: 0, y: 0.5916563}
+      - {x: -1.0307593, y: 0.46230137}
       - {x: -1.0978832, y: -1.3350556}
       - {x: 1.0022398, y: -1.3669364}
-      - {x: 0.9988781, y: 0.5481255}
+      - {x: 0.88240576, y: 0.45494753}
 --- !u!1 &8314612167096853160
 GameObject:
   m_ObjectHideFlags: 0

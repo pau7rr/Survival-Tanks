@@ -29,6 +29,6 @@ public class MainMenu : MonoBehaviour
 
     public void Logout()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0, LoadSceneMode.Single); 
     }
 }

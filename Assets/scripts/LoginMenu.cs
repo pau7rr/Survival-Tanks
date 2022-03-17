@@ -13,6 +13,7 @@ public class LoginMenu : MonoBehaviour
    // public InputField user;
     public TextMeshProUGUI user;
     public TextMeshProUGUI contraseña;
+    public GameObject contra;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,8 +30,9 @@ public class LoginMenu : MonoBehaviour
     {
         //SceneManager.LoadScene(1);
         if (user.text != null && contraseña.text != null) {
-            Debug.Log(user.text);
-            StartCoroutine(CallLogin(user.text, contraseña.text));
+            
+            Debug.Log(contra.GetComponent<TMP_InputField>().text);
+            StartCoroutine(CallLogin(user.text, contra.GetComponent<TMP_InputField>().text));
             
         }
        
@@ -78,8 +80,8 @@ public class LoginMenu : MonoBehaviour
             TankPlayer tank = new TankPlayer();
             tank = JsonUtility.FromJson<TankPlayer>(respuesta);
             TankStats player = new TankStats();
-            player.Stats(tank.strengh,tank.health,tank.speed,tank.tower,tank.body,tank.track, tank.bullet ,token);
-            Debug.LogWarning(TankStats.strengh);
+            player.Stats(tank.strengh,tank.health,tank.speed,tank.tower,tank.body,tank.track, tank.bullet ,token, tank.id);
+            Debug.LogWarning(TankStats.id);
             yield return new WaitForSeconds(0.5f);
             SceneManager.LoadScene(1);
         }

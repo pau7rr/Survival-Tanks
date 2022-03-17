@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BalaEnemiga : MonoBehaviour
 {
-    float dmg = 20;
+    float dmg ;
     public Rigidbody2D rigid;
+    private int ronda;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
@@ -21,7 +22,9 @@ public class BalaEnemiga : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ronda =  GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas();
+        if (ronda <= 20) { dmg = 20; }
+        if (ronda >= 21) { dmg = 40; }
     }
 
     // Update is called once per frame

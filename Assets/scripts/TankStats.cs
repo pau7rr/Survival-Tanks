@@ -6,19 +6,40 @@ public class TankStats
 {
     static public int strengh;
     static public int health;
+    static public int maxhealth;
     static public int speed;
     static public string tower;
     static public string body;
     static public string track;
     static public string bullet;
     static public string token;
+    static public int id;
+    //STATS
+    static private int kills;
+    static private int disparos;
+    static private int disparosAcertados;
+    static private int tiempoPartida;
+
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    public void Stats(int fuerza, int vida, int vel, string torre, string b, string ruedas, string bala, string tok) {
+    public void sumardisparo() { disparos += 1; }
+    public void sumardisparoAcertado() { disparosAcertados += 1; }
+    public void sumarKill() { kills += 1; }
+
+    public void settiempoP(int tiempo) { tiempoPartida = tiempo; }
+
+    public int getTiempo() { return tiempoPartida; }
+
+    public int getKills() { return kills; }
+    public int getDisparos() { return disparos; }
+
+    public int getDisparosAcertados() { return disparosAcertados; }
+    public void Stats(int fuerza, int vida, int vel, string torre, string b, string ruedas, string bala, string tok, int id2) {
         strengh = fuerza;
         health = vida;
         speed = vel;
@@ -27,6 +48,8 @@ public class TankStats
         track = ruedas;
         bullet = bala;
         token = tok;
+        maxhealth = vida;
+        id = id2;
     }
 
     // Update is called once per frame

@@ -13,6 +13,7 @@ public class TankPlayer
     public string track;
     public string bullet;
     public string token;
+    public int id;
     //public string bullet;
     // Start is called before the first frame update
     void Start()

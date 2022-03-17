@@ -796,7 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 100
   tipoE: 2
-  moneda: {fileID: 0}
+  moneda: {fileID: 1399405642781997018, guid: 04643bf817155d04c84ac2534b913e90, type: 3}
 --- !u!114 &-8426118581048864284
 MonoBehaviour:
   m_ObjectHideFlags: 0

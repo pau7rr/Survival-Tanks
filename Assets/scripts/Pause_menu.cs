@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class Pause_menu : MonoBehaviour
@@ -52,4 +53,30 @@ public class Pause_menu : MonoBehaviour
         Gamepause = false;
         player.GetComponent<player_move>().enabled = true;
     }
+    public void Mapa()
+    {
+        SceneManager.LoadScene(2);
+    }
+
+    public IEnumerator mandarMonedas()
+    {
+        WWWForm form = new WWWForm();
+
+        form.AddField("coins", 2);
+        UnityWebRequest www = UnityWebRequest.Post("https://survival-tanks-api.herokuapp.com/api/user/addCoins", form);
+        www.SetRequestHeader("Authorization", "Bearer " + TankStats.token);
+        yield return www.Send();
+
+        if (www.error != null)
+        {
+            Debug.LogWarning("Error" + www.error);
+        }
+        else
+        {
+            string respuesta = www.downloadHandler.text;
+            Debug.LogWarning(respuesta);
+        }
+
+    }
+
 }

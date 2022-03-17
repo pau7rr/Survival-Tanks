@@ -55,11 +55,13 @@ public class player_move : MonoBehaviourPun
     //EFECTOS
     public GameObject bombaT;
     public TextMeshProUGUI textoBombas;
-     void Start()
+    //STATS
+    TankStats ts = new TankStats();
+    void Start()
     {
         tiempoentredisparos = start_tiempoentredisparos;
         rb.freezeRotation = true;
-       
+        
 
     }
 
@@ -141,6 +143,7 @@ public class player_move : MonoBehaviourPun
 
     void disparar() {
         disparo.Play();
+        ts.sumardisparo();
        GameObject balaspawned =  Instantiate(bala, spawnbala.position, spawnbala.rotation);
         Rigidbody2D cuerpo = balaspawned.GetComponent<Rigidbody2D>();
         cuerpo.AddForce(spawnbala.up * bulledspeed, ForceMode2D.Impulse);
@@ -176,6 +179,5 @@ public class player_move : MonoBehaviourPun
         }
 
     }
-
 
 }

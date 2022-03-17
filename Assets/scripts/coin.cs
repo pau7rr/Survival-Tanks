@@ -20,10 +20,11 @@ public class coin : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            Debug.LogWarning("d");
-            coinsound.Play();
-            Destroy(this.gameObject);
             col.GetComponent<vidaPlayer>().monedas += 1;
+            StartCoroutine(DestroycoinColision());
+            //coinsound.Play();
+            // Destroy(this.gameObject);
+           
         }
     }
 
@@ -33,6 +34,16 @@ public class coin : MonoBehaviour
         yield return new WaitForSeconds(13f);
         Destroy(this.gameObject);
         
+
+    }
+
+    public IEnumerator DestroycoinColision()
+    {
+        coinsound.Play();
+      
+        yield return new WaitForSeconds(0.2f);
+        Destroy(this.gameObject);
+
 
     }
 

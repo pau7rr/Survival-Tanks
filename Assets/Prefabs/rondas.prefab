@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7688871950277891343}
   m_Layer: 0
   m_Name: rondas
-  m_TagString: Untagged
+  m_TagString: rondas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,11 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39834bbe752b604e8f54bae41afecf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnpoint: {fileID: 0}
   spawnpoint1: {fileID: 0}
   spawnpoint2: {fileID: 0}
+  spawnpoint3: {fileID: 0}
+  spawnpoint4: {fileID: 0}
+  spawnpoint5: {fileID: 0}
   textoRondas: {fileID: 0}
   textoEnemigo: {fileID: 0}
+  spawnsList: []
   Boss: {fileID: 7073275846901866723, guid: ef1e275175373944092c9581ca152e0b, type: 3}
   enemigo1: {fileID: 8228167123690809997, guid: 36d856d1afe1e4c4eadbe702f2780a0e, type: 3}
   enemigo2: {fileID: 2174239610254491715, guid: e6257a63c36df1a46ae0d412e9207039, type: 3}

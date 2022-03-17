@@ -8,6 +8,8 @@ TagManager:
   - vida
   - Moneda
   - bala
+  - d
+  - rondas
   layers:
   - Default
   - TransparentFX
