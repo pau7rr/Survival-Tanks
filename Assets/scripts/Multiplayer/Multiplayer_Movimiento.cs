@@ -189,7 +189,7 @@ public class Multiplayer_Movimiento : MonoBehaviour
 
             Debug.LogWarning("bombasfde");
             Destroy(item);
-           item.GetComponent<PhotonView>().RPC("DestroyObject", RpcTarget.AllBuffered);
+           item.GetComponent<PhotonView>().RPC("Deestroy", RpcTarget.AllBuffered);
         }
 
     }

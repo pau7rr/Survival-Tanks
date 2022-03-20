@@ -26,7 +26,7 @@ public class vidaPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     { // declarar valor de la vida, minimo y maximo
-        //textomonedas.text = ""+monedas;
+        textomonedas.text = ""+monedas;
         barraDeVida.fillAmount = Mathf.Clamp(vida / TankStats.health, 0, 1f);
         if (vida <= 0) {  StartCoroutine(mandarMonedas()); ts.settiempoP(Time.timeSinceLevelLoad); StartCoroutine(mandarstats()); Destroy(this.gameObject); }
 
