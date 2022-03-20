@@ -41,6 +41,9 @@ MonoBehaviour:
   - RespawnSpaceship
   - OnDirectionChange_LEFT
   - OnDirectionChange_RIGHT
+  - OnCollisionEnter2D
+  - Deestroy
+  - bajarvida
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

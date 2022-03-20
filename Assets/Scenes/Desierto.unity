@@ -416,7 +416,7 @@ GameObject:
   - component: {fileID: 479363342}
   - component: {fileID: 479363341}
   m_Layer: 0
-  m_Name: CM vcam1
+  m_Name: CMvcam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -578,7 +578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18951797, y: -8.082488, z: -10}
+  m_LocalPosition: {x: 12.547986, y: -8.100014, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

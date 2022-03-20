@@ -5,9 +5,9 @@ using UnityEngine;
 public class TankStats
 {
     static public int strengh;
-    static public int health;
+    static public int health = 100;
     static public int maxhealth;
-    static public int speed;
+    static public int speed = 3;
     static public string tower;
     static public string body;
     static public string track;

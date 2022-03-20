@@ -849,7 +849,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 200
   m_TargetDisplay: 0
 --- !u!114 &4116944208251007353
 MonoBehaviour:
@@ -904,7 +904,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pausemenu: {fileID: 4116944208480257322}
-  player: {fileID: 0}
 --- !u!1 &4116944208436819604
 GameObject:
   m_ObjectHideFlags: 0
