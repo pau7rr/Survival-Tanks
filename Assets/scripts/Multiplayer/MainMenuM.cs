@@ -28,6 +28,8 @@ public class MainMenuM : MonoBehaviourPunCallbacks
     private void Awake() 
     {
       PhotonNetwork.AutomaticallySyncScene = true;
+       // PhotonNetwork.player.NickName = TankStats.nombre;
+        //PhotonNetwork.player
     }
 
     public void FindOpponent()

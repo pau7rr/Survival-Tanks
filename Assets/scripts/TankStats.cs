@@ -14,6 +14,7 @@ public class TankStats
     static public string bullet;
     static public string token;
     static public int id;
+    static public string nombre;
     //STATS
     static private int kills;
     static private int disparos;
@@ -39,7 +40,7 @@ public class TankStats
     public int getDisparos() { return disparos; }
 
     public int getDisparosAcertados() { return disparosAcertados; }
-    public void Stats(int fuerza, int vida, int vel, string torre, string b, string ruedas, string bala, string tok, int id2) {
+    public void Stats(int fuerza, int vida, int vel, string torre, string b, string ruedas, string bala, string tok, int id2, string name) {
         strengh = fuerza;
         health = vida;
         speed = vel;
@@ -50,6 +51,7 @@ public class TankStats
         token = tok;
         maxhealth = vida;
         id = id2;
+        nombre = name;
     }
 
     // Update is called once per frame
