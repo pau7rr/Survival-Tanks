@@ -975,7 +975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.18951797, y: -8.082488, z: -10}
+  m_LocalPosition: {x: -2.109232, y: -8.070751, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -12644,6 +12644,10 @@ PrefabInstance:
     - target: {fileID: 4116944208251007359, guid: eb2cdd80a646615418ce6a8b1c9f8841, type: 3}
       propertyPath: m_Name
       value: Pause_meun
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116944208251007359, guid: eb2cdd80a646615418ce6a8b1c9f8841, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb2cdd80a646615418ce6a8b1c9f8841, type: 3}

@@ -37,9 +37,22 @@ public class ChatManager : MonoBehaviour
     }
     [PunRPC]
     private void Sendmessage(string mensj) {
-        
-        texto.text = TankStats.nombre + ": " +mensj;
+        /*if (pv.IsMine)
+        {
+            texto.text = PhotonNetwork.LocalPlayer.NickName + ": " + mensj;
+        }
+        else {
+            string nombre = "";
+            foreach (var p in PhotonNetwork.PlayerListOthers)
+            {
+                nombre = p.NickName;
+            }
+          
+            texto.text = nombre + ": " + mensj;
+        }
+        */
         Debug.LogWarning("setea text");
+        texto.text = PhotonNetwork.LocalPlayer.NickName + ": " + mensj;
         StartCoroutine(Remove());
     }
 

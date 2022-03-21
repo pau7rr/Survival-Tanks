@@ -30,7 +30,7 @@ public class MvidaPlayer : MonoBehaviour
         if (pv.IsMine)
         {
             barraDeVida.fillAmount = Mathf.Clamp(vida / TankStats.health, 0, 1f);
-            if (vida <= 0) { StartCoroutine(mandarMonedas()); ts.settiempoP(Time.timeSinceLevelLoad); StartCoroutine(mandarstats()); Deestroy(); }
+            if (vida <= 0) { StartCoroutine(mandarMonedas()); ts.settiempoP(Time.timeSinceLevelLoad); StartCoroutine(mandarstats()); pv.RPC("reload", RpcTarget.AllBuffered); Deestroy(); }
         }
 
 
@@ -44,6 +44,16 @@ public class MvidaPlayer : MonoBehaviour
             Debug.LogWarning("klk");
         }
        
+    }
+
+
+    [PunRPC]
+    public void reload()
+    {
+        
+            PhotonNetwork.LoadLevel("Desierto_Multi");
+        
+
     }
 
 
