@@ -54,6 +54,14 @@ public class TankStats
         nombre = name;
     }
 
+    public void StatsBase(int fuerza, int vida, int vel)
+    {
+        strengh = fuerza;
+        health = vida;
+        speed = vel;
+        maxhealth = vida;
+    }
+
     // Update is called once per frame
     void Update()
     {

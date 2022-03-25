@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MBala : MonoBehaviour
 {
-    float dmg = 20;
+    float dmg = TankStats.strengh;
     public Rigidbody2D rigid;
     private int ronda;
     public PhotonView pv;
@@ -45,6 +45,17 @@ public class MBala : MonoBehaviour
     {
         PhotonNetwork.Destroy(gameObject);
             Destroy(this.gameObject);
+    }
+
+    [PunRPC]
+    private void DestroyBalasotro()
+    {
+        if (!pv.IsMine) {
+            Debug.LogWarning("balareventada");
+            PhotonNetwork.Destroy(gameObject);
+            Destroy(this.gameObject);
+        }
+      
     }
 
     // Update is called once per frame

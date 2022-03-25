@@ -11,7 +11,7 @@ public class MvidaPlayer : MonoBehaviour
 {
     public float vida = TankStats.health;
     public int monedas = 0;
-    public TextMeshProUGUI textomonedas;
+    public TextMeshProUGUI victoriatext;
     public Image barraDeVida;
     public PhotonView pv;
     //contador
@@ -22,6 +22,8 @@ public class MvidaPlayer : MonoBehaviour
         vida = TankStats.health;
         vida = Mathf.Clamp(vida, 0, TankStats.health);
         barraDeVida = GameObject.FindGameObjectWithTag("vida").GetComponent<Image>();
+        victoriatext = GameObject.Find("vtext").GetComponent<TextMeshProUGUI>();
+        victoriatext.text = "Victorias: " + MStats.victorias;
     }
     // Update is called once per frame
     void Update()
@@ -30,7 +32,9 @@ public class MvidaPlayer : MonoBehaviour
         if (pv.IsMine)
         {
             barraDeVida.fillAmount = Mathf.Clamp(vida / TankStats.health, 0, 1f);
-            if (vida <= 0) { StartCoroutine(mandarMonedas()); ts.settiempoP(Time.timeSinceLevelLoad); StartCoroutine(mandarstats()); pv.RPC("reload", RpcTarget.AllBuffered); Deestroy(); }
+            if (vida <= 0) { StartCoroutine(mandarMonedas()); ts.settiempoP(Time.timeSinceLevelLoad); StartCoroutine(mandarstats()); derrota();
+                pv.RPC("victoria", RpcTarget.Others);   pv.RPC("Deestroy", RpcTarget.AllBuffered);
+            }
         }
 
 
@@ -46,16 +50,15 @@ public class MvidaPlayer : MonoBehaviour
        
     }
 
-
     [PunRPC]
-    public void reload()
+    public void victoria()
     {
-        
-            PhotonNetwork.LoadLevel("Desierto_Multi");
-        
 
+        MStats.victorias += 1;
+        Debug.LogWarning("victorias");
     }
 
+    public void derrota() { MStats.derrotas += 1; }
 
     [PunRPC]
     private void Deestroy()
@@ -63,7 +66,8 @@ public class MvidaPlayer : MonoBehaviour
         PhotonNetwork.Destroy(gameObject);
         Destroy(this.gameObject);
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
-        PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().name);
+        if (MStats.victorias == 3 || MStats.derrotas == 3) { SceneManager.LoadScene(10, LoadSceneMode.Single); } else { PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().name); }
+        
     }
     public IEnumerator mandarMonedas()
     {

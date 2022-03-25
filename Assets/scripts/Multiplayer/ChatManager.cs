@@ -12,7 +12,7 @@ public class ChatManager : MonoBehaviour
     public TextMeshProUGUI texto;
     private InputField inputj;
     private bool desactivar;
-
+    private int contadormensj = 0;
     IEnumerator Remove() {
         yield return new WaitForSeconds(4f);
        // chat.SetActive(false);
@@ -37,9 +37,12 @@ public class ChatManager : MonoBehaviour
     }
     [PunRPC]
     private void Sendmessage(string mensj) {
-        /*if (pv.IsMine)
+        contadormensj += 1;
+        if (pv.IsMine)
         {
-            texto.text = PhotonNetwork.LocalPlayer.NickName + ": " + mensj;
+            if (contadormensj % 3 == 0) { texto.text = PhotonNetwork.LocalPlayer.NickName + ": " + mensj; } else { texto.text = texto.text + "\n"+ PhotonNetwork.LocalPlayer.NickName + ": " + mensj; }
+                
+            Debug.LogWarning("setea text mio");
         }
         else {
             string nombre = "";
@@ -47,12 +50,13 @@ public class ChatManager : MonoBehaviour
             {
                 nombre = p.NickName;
             }
-          
-            texto.text = nombre + ": " + mensj;
+            if (contadormensj % 3 == 0) { texto.text = nombre + ": " + mensj; } else { texto.text = texto.text + "\n" + nombre + ": " + mensj; }
+            //texto.text = nombre + ": " + mensj;
+            Debug.LogWarning("setea text otro" + nombre );
         }
-        */
-        Debug.LogWarning("setea text");
-        texto.text = PhotonNetwork.LocalPlayer.NickName + ": " + mensj;
+
+
+        // texto.text = PhotonNetwork.LocalPlayer.NickName + ": " + mensj;
         StartCoroutine(Remove());
     }
 

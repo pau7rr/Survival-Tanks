@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
+
 public class Multiplayer_Movimiento : MonoBehaviour
 {
 
@@ -34,7 +36,7 @@ public class Multiplayer_Movimiento : MonoBehaviour
     float rotateSpeedMax = 130f;
     //contador de balas y bombas
     private GameObject[] balas;
-    public int bombas = 1;
+    public int bombas = 3;
     // variables
     public AudioSource disparo;
     //public float movespeed = 5f;
@@ -58,8 +60,11 @@ public class Multiplayer_Movimiento : MonoBehaviour
     public GameObject canvas;
     //CAMERA
     public CinemachineVirtualCamera cam;
+    //chat
+    private InputField inputj;
     void Start()
     {
+        inputj = GameObject.Find("InputField").GetComponent<InputField>();
         tiempoentredisparos = start_tiempoentredisparos;
         rb.freezeRotation = true;
         canvas.GetComponent<Canvas>().worldCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
@@ -78,76 +83,79 @@ public class Multiplayer_Movimiento : MonoBehaviour
     void Update()
     {
         //bombas
-        //  textoBombas.text = "Bombas: " + bombas;
+         // textoBombas.text = "Bombas: " + bombas;
         if (!pv.IsMine) { return; }
-        if (bombas >= 1) { if (Input.GetKeyDown(KeyCode.E)) { Debug.LogWarning("e pressed"); fuckbalas(); } }
-        rotateLeft = (Input.GetKeyDown(keyRotateLeft)) ? true : rotateLeft;
-        rotateLeft = (Input.GetKeyUp(keyRotateLeft)) ? false : rotateLeft;
-        if (rotateLeft)
+        if (bombas >= 1 && !inputj.isFocused) { if (Input.GetKeyDown(KeyCode.E)) { Debug.LogWarning("e pressed"); fuckbalas(); } }
+        if (!inputj.isFocused)
         {
-            rotateSpeedLeft = (rotateSpeedLeft < rotateSpeedMax) ? rotateSpeedLeft + rotateAcceleration : rotateSpeedMax;
-        }
-        else
-        {
-            rotateSpeedLeft = (rotateSpeedLeft > 0) ? rotateSpeedLeft - rotateDeceleration : 0;
-        }
-        transform.Rotate(0f, 0f, rotateSpeedLeft * Time.deltaTime);
+            rotateLeft = (Input.GetKeyDown(keyRotateLeft)) ? true : rotateLeft;
+            rotateLeft = (Input.GetKeyUp(keyRotateLeft)) ? false : rotateLeft;
+            if (rotateLeft)
+            {
+                rotateSpeedLeft = (rotateSpeedLeft < rotateSpeedMax) ? rotateSpeedLeft + rotateAcceleration : rotateSpeedMax;
+            }
+            else
+            {
+                rotateSpeedLeft = (rotateSpeedLeft > 0) ? rotateSpeedLeft - rotateDeceleration : 0;
+            }
+            transform.Rotate(0f, 0f, rotateSpeedLeft * Time.deltaTime);
 
-        rotateRight = (Input.GetKeyDown(keyRotateRight)) ? true : rotateRight;
-        rotateRight = (Input.GetKeyUp(keyRotateRight)) ? false : rotateRight;
-        if (rotateRight)
-        {
-            rotateSpeedRight = (rotateSpeedRight < rotateSpeedMax) ? rotateSpeedRight + rotateAcceleration : rotateSpeedMax;
-        }
-        else
-        {
-            rotateSpeedRight = (rotateSpeedRight > 0) ? rotateSpeedRight - rotateDeceleration : 0;
-        }
-        transform.Rotate(0f, 0f, rotateSpeedRight * Time.deltaTime * -1f);
+            rotateRight = (Input.GetKeyDown(keyRotateRight)) ? true : rotateRight;
+            rotateRight = (Input.GetKeyUp(keyRotateRight)) ? false : rotateRight;
+            if (rotateRight)
+            {
+                rotateSpeedRight = (rotateSpeedRight < rotateSpeedMax) ? rotateSpeedRight + rotateAcceleration : rotateSpeedMax;
+            }
+            else
+            {
+                rotateSpeedRight = (rotateSpeedRight > 0) ? rotateSpeedRight - rotateDeceleration : 0;
+            }
+            transform.Rotate(0f, 0f, rotateSpeedRight * Time.deltaTime * -1f);
 
-        moveForward = (Input.GetKeyDown(keyMoveForward)) ? true : moveForward;
-        moveForward = (Input.GetKeyUp(keyMoveForward)) ? false : moveForward;
-        if (moveForward)
-        {
-            moveSpeed = (moveSpeed < moveSpeedMax) ? moveSpeed + moveAcceleration : moveSpeedMax;
-        }
-        else
-        {
-            moveSpeed = (moveSpeed > 0) ? moveSpeed - moveDeceleration : 0;
-        }
-        transform.Translate(0f, moveSpeed * Time.deltaTime, 0f);
+            moveForward = (Input.GetKeyDown(keyMoveForward)) ? true : moveForward;
+            moveForward = (Input.GetKeyUp(keyMoveForward)) ? false : moveForward;
+            if (moveForward)
+            {
+                moveSpeed = (moveSpeed < moveSpeedMax) ? moveSpeed + moveAcceleration : moveSpeedMax;
+            }
+            else
+            {
+                moveSpeed = (moveSpeed > 0) ? moveSpeed - moveDeceleration : 0;
+            }
+            transform.Translate(0f, moveSpeed * Time.deltaTime, 0f);
 
-        moveReverse = (Input.GetKeyDown(keyMoveReverse)) ? true : moveReverse;
-        moveReverse = (Input.GetKeyUp(keyMoveReverse)) ? false : moveReverse;
-        if (moveReverse)
-        {
-            moveSpeedReverse = (moveSpeedReverse < moveSpeedMax) ? moveSpeedReverse + moveAcceleration : moveSpeedMax;
-        }
-        else
-        {
-            moveSpeedReverse = (moveSpeedReverse > 0) ? moveSpeedReverse - moveDeceleration : 0;
-        }
-        transform.Translate(0f, moveSpeedReverse * Time.deltaTime * -1f, 0f);
+            moveReverse = (Input.GetKeyDown(keyMoveReverse)) ? true : moveReverse;
+            moveReverse = (Input.GetKeyUp(keyMoveReverse)) ? false : moveReverse;
+            if (moveReverse)
+            {
+                moveSpeedReverse = (moveSpeedReverse < moveSpeedMax) ? moveSpeedReverse + moveAcceleration : moveSpeedMax;
+            }
+            else
+            {
+                moveSpeedReverse = (moveSpeedReverse > 0) ? moveSpeedReverse - moveDeceleration : 0;
+            }
+            transform.Translate(0f, moveSpeedReverse * Time.deltaTime * -1f, 0f);
 
-        if (moveForward | moveReverse | rotateRight | rotateLeft)
-        {
-            trackStart();
-        }
-        else
-        {
-            trackStop();
-        }
-        if (tiempoentredisparos <= 0)
-        {
-            if (Input.GetKeyDown("space")) { disparar(); }
-            if (Input.GetKeyDown(KeyCode.Mouse0)) { disparar(); }
+            if (moveForward | moveReverse | rotateRight | rotateLeft)
+            {
+                trackStart();
+            }
+            else
+            {
+                trackStop();
+            }
+            if (tiempoentredisparos <= 0)
+            {
+                //if (Input.GetKeyDown("space")) { disparar(); }
+                if (Input.GetKeyDown(KeyCode.Mouse0)) { disparar(); }
 
+            }
+            else
+            {
+                tiempoentredisparos -= Time.deltaTime;
+            }
+            //HandleTurretMovement(pointerPosition)
         }
-        else
-        {
-            tiempoentredisparos -= Time.deltaTime;
-        }
-        //HandleTurretMovement(pointerPosition)
     }
 
     void disparar()
@@ -188,8 +196,7 @@ public class Multiplayer_Movimiento : MonoBehaviour
         {
 
             Debug.LogWarning("bombasfde");
-            Destroy(item);
-           item.GetComponent<PhotonView>().RPC("Deestroy", RpcTarget.AllBuffered);
+           item.GetComponent<PhotonView>().RPC("DestroyBalasotro", RpcTarget.AllBuffered);
         }
 
     }
