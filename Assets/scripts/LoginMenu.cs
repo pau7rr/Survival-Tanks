@@ -8,6 +8,8 @@ using UnityEngine.UI;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Web;
+using System;
+
 public class LoginMenu : MonoBehaviour
 {
    // public InputField user;
@@ -53,16 +55,17 @@ public class LoginMenu : MonoBehaviour
             string respuesta = www.downloadHandler.text;
             Debug.LogWarning(respuesta);
            string[] token = respuesta.Split('"');
-           // Debug.LogWarning("TOKEN:: " + token[7]);
-           // Debug.LogWarning("NOMBRE:: " + token[15]);
-            if (respuesta.Contains("\"success\":true")) { StartCoroutine(TankSetup(token[7], token[15]));}
+            // Debug.LogWarning("TOKEN:: " + token[7]);
+            string id = token[12].TrimEnd(new Char[] { ',' }).TrimStart(new Char[] { ':' });
+            Debug.LogWarning("id:: " + id);
+            if (respuesta.Contains("\"success\":true")) { StartCoroutine(TankSetup(token[7], token[15], System.Int32.Parse(id)));}
             
         }
 
     }
 
 
-    public IEnumerator TankSetup(string token, string nombre)
+    public IEnumerator TankSetup(string token, string nombre, int id)
     {
         Debug.LogWarning(token);
         UnityWebRequest request = UnityWebRequest.Get("https://survival-tanks-api.herokuapp.com/api/usertank");
@@ -81,7 +84,7 @@ public class LoginMenu : MonoBehaviour
             TankPlayer tank = new TankPlayer();
             tank = JsonUtility.FromJson<TankPlayer>(respuesta);
             TankStats player = new TankStats();
-            player.Stats(tank.strengh,tank.health,tank.speed,tank.tower,tank.body,tank.track, tank.bullet ,token, tank.id, nombre);
+            player.Stats(tank.strengh,tank.health,tank.speed,tank.tower,tank.body,tank.track, tank.bullet ,token, id, nombre);
             Debug.LogWarning(TankStats.nombre);
             yield return new WaitForSeconds(0.5f);
             SceneManager.LoadScene(1);

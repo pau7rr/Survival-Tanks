@@ -95,7 +95,7 @@ public class MvidaPlayer : MonoBehaviour
         form.AddField("user_id", TankStats.id);
         form.AddField("round", GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas());
         form.AddField("kills", ts.getKills());
-        form.AddField("time_played", (int)ts.getTiempo());
+        form.AddField("time_played", 5);
         form.AddField("shots", ts.getDisparos());
         form.AddField("successful_shots", ts.getDisparosAcertados());
         UnityWebRequest www = UnityWebRequest.Post("https://survival-tanks-api.herokuapp.com/api/updateSoloStats", form);
