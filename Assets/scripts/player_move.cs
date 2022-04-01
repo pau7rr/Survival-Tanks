@@ -70,7 +70,7 @@ public class player_move : MonoBehaviourPun
     void Update()
     {
         //bombas
-        textoBombas.text = "Bombas: " + bombas;
+    // textoBombas.text = "Bombas: " + bombas;
         if (bombas >= 1) { if (Input.GetKeyDown(KeyCode.E)) { Debug.LogWarning("e pressed"); fuckbalas(); } }
         rotateLeft = (Input.GetKeyDown(keyRotateLeft)) ? true : rotateLeft;
         rotateLeft = (Input.GetKeyUp(keyRotateLeft)) ? false : rotateLeft;
