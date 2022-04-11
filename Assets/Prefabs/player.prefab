@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 4994796781853100304}
   - component: {fileID: 6569604842277362416}
   - component: {fileID: 2963046061148693368}
+  - component: {fileID: -5727654004087202265}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -577,7 +578,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 1}
   start_tiempoentredisparos: 0.4
   tiempoentredisparos: 0.4
-  bombaT: {fileID: 1927209853057304386, guid: 3953ad2d1e1be9b42a021287bf18bfcd, type: 3}
+  bombaT: {fileID: 1927209853057304386, guid: 3665408d6c4e33c46b9b15f00c6c2b92, type: 3}
   textoBombas: {fileID: 0}
 --- !u!114 &4994796781853100304
 MonoBehaviour:
@@ -742,6 +743,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5727654004087202265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814745323945077448}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7651b136358a59b4ebc5c541a7c615ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torreB: {fileID: 0}
+  body: {fileID: 6814745325502047683}
+  torre: {fileID: 6814745324057349198}
+  gunconector: {fileID: 6814745325547286639}
+  rueda1: {fileID: 7613812810927289121}
+  rueda2: {fileID: 1245933165369356839}
+  spriteRenderer: {fileID: 0}
+  spriteArray: []
 --- !u!1 &6814745324057349184
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,7 +873,7 @@ GameObject:
   - component: {fileID: 6814745325502047684}
   - component: {fileID: 6814745325502047683}
   m_Layer: 0
-  m_Name: Hull
+  m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

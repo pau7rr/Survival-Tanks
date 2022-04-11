@@ -212,6 +212,7 @@ MonoBehaviour:
   vida: 100
   tipoE: 1
   moneda: {fileID: 1399405642781997018, guid: 04643bf817155d04c84ac2534b913e90, type: 3}
+  explosion: {fileID: 2749870896420513289, guid: 3953ad2d1e1be9b42a021287bf18bfcd, type: 3}
 --- !u!114 &8596095639108955393
 MonoBehaviour:
   m_ObjectHideFlags: 0

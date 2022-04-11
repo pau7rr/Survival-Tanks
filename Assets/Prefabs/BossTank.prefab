@@ -777,6 +777,7 @@ MonoBehaviour:
   vida: 280
   tipoE: 0
   moneda: {fileID: 1399405642781997018, guid: 04643bf817155d04c84ac2534b913e90, type: 3}
+  explosion: {fileID: 2749870896420513289, guid: 61924963f82904a4194ebfcff8aab5bf, type: 3}
 --- !u!114 &2517174995471565658
 MonoBehaviour:
   m_ObjectHideFlags: 0

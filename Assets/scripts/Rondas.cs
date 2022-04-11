@@ -24,6 +24,7 @@ public class Rondas : MonoBehaviour
     public GameObject enemigo1;
     public GameObject enemigo2;
     public GameObject enemigo3;
+    public List<GameObject> spawnEnemies = new List<GameObject>();
     //PLAYER
     public GameObject player;
     // Start is called before the first frame update
@@ -176,54 +177,64 @@ public class Rondas : MonoBehaviour
     }
 
     void inicioLista() {
+        //Añadimos Spawnpoints
         spawnsList.Add(spawnpoint1);
         spawnsList.Add(spawnpoint2);
         spawnsList.Add(spawnpoint3);
         spawnsList.Add(spawnpoint4);
         spawnsList.Add(spawnpoint5);
+        //Añadimos Enemigos
+        spawnEnemies.Add(enemigo2);
+        spawnEnemies.Add(enemigo3);
     }
 
 
     void Randomspawn() {
-
-        int spawnNumber = Random.Range(0, spawnsList.Count - 1);
+        //creo 3 numeros random que no sean repetidos
+        int spawnNumber = Random.Range(0, 5);
         int spawnNumber2;
         int spawnNumber3;
         do
         {
-            spawnNumber2 = Random.Range(0, spawnsList.Count - 1);
+            spawnNumber2 = Random.Range(0, 5);
         } while (spawnNumber == spawnNumber2);
 
         
         do
         {
-            spawnNumber3 = Random.Range(0, spawnsList.Count - 1);
+            spawnNumber3 = Random.Range(0, 5);
         } while (spawnNumber3 == spawnNumber2 || spawnNumber3 == spawnNumber);
 
-
-        for (int i = 0; i < spawnsList.Count - 1; i++)
+        //indico que tipos de enemigos van a respawnear random
+        int enemigo1Spawn = Random.Range(0, 2);
+        int enemigo2Spawn = Random.Range(0, 2);
+        int enemigo3Spawn = Random.Range(0, 2);
+        Debug.LogWarning(enemigo1Spawn);
+        Debug.LogWarning(enemigo2Spawn);
+        //Spawneo a los enemigos
+        for (int i = 0; i <= 4; i++)
         {
             if (spawnNumber == i)
             {
-                Instantiate(enemigo2, spawnsList[i].position, spawnsList[i].rotation);
+                Instantiate(spawnEnemies[enemigo1Spawn], spawnsList[i].position, spawnsList[i].rotation);
                 //spawnsList.RemoveAt(i);
             }
         }
      
-        for (int i = 0; i < spawnsList.Count - 1 ; i++)
+        for (int i = 0; i <= 4 ; i++)
         {
             if (spawnNumber2 == i)
             {
-                Instantiate(enemigo2, spawnsList[i].position, spawnsList[i].rotation);
+                Instantiate(spawnEnemies[enemigo2Spawn], spawnsList[i].position, spawnsList[i].rotation);
                 //spawnsList.RemoveAt(i);
             }
         }
 
-        for (int i = 0; i < spawnsList.Count - 1; i++)
+        for (int i = 0; i <= 4; i++)
         {
             if (spawnNumber3 == i)
             {
-                Instantiate(enemigo3, spawnsList[i].position, spawnsList[i].rotation);
+                Instantiate(spawnEnemies[enemigo3Spawn], spawnsList[i].position, spawnsList[i].rotation);
                // spawnsList.RemoveAt(i);
             }
         }

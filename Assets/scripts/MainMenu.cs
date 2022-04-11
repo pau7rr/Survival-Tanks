@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject music;
     void Start()
     {
-        
+        if (GameObject.Find("MenuMusic") == null)
+        {
+            Debug.LogWarning("Creamos musica");
+            Instantiate(music);
+        }
     }
 
     // Update is called once per frame

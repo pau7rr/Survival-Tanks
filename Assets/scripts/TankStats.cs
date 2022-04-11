@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TankStats
 {
-    static public int strengh;
+    static public int strengh = 20;
     static public int health = 100;
     static public int maxhealth;
     static public int speed = 3;

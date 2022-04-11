@@ -8,6 +8,7 @@ public class vidaEnemigo : MonoBehaviour
     public int tipoE;
     public GameObject moneda;
     private int ronda;
+    public GameObject explosion;
     //STATS
     TankStats ts = new TankStats();
     // Start is called before the first frame update
@@ -41,6 +42,7 @@ public class vidaEnemigo : MonoBehaviour
     {
         
         if (vida <= 0) {
+            Instantiate(explosion, this.transform.position, moneda.transform.rotation);
             ts.sumarKill();
             Destroy(this.gameObject);
            Instantiate(moneda, this.transform.position, moneda.transform.rotation);
