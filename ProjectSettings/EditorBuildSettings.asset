@@ -41,5 +41,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Multiplayer/TrasPartida.unity
     guid: 97fd9085d268df94eacc102489eb3958
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/M2.unity
+    guid: d9f5ad1620e3fac499b59f30adefc9bf
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/Multiplayer.unity
+    guid: badb03835c8e9b744a129a297995bb55
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 49cfc3714f64048489e30e28c69c1151, type: 2}

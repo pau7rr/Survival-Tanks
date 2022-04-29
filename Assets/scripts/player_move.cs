@@ -57,6 +57,7 @@ public class player_move : MonoBehaviourPun
     public TextMeshProUGUI textoBombas;
     //STATS
     TankStats ts = new TankStats();
+    
     void Start()
     {
         tiempoentredisparos = start_tiempoentredisparos;

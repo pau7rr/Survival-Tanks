@@ -15,6 +15,7 @@ public class vidaEnemigo : MonoBehaviour
     void Start()
     {
         ronda = GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas();
+        if (ronda == null) { ronda = 1; }
         Debug.LogWarning("rondaa " +ronda);
         if (ronda <= 20) {
             //Boss

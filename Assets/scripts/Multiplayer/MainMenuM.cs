@@ -105,7 +105,7 @@ public class MainMenuM : MonoBehaviourPunCallbacks
             waitingStatusText.text = "Opponent Found";
             Debug.Log("Match is ready to begin");
             //proba = 1;
-            PhotonNetwork.LoadLevel("Desierto_Multi");
+            PhotonNetwork.LoadLevel("M2");
             
         }
     }
