@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Multiplayer/Multiplayer.unity
     guid: badb03835c8e9b744a129a297995bb55
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 1b7b66dd671f8d94e965f9c400d51649
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 49cfc3714f64048489e30e28c69c1151, type: 2}

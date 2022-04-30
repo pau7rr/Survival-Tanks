@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public GameObject music;
     void Start()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         if (GameObject.Find("MenuMusic") == null)
         {
             Debug.LogWarning("Creamos musica");
@@ -25,6 +26,11 @@ public class MainMenu : MonoBehaviour
     public void Login()
     {
         SceneManager.LoadScene(2);
+    }
+
+    public void Tuto()
+    {
+        SceneManager.LoadScene(13);
     }
 
     public void Exit()
