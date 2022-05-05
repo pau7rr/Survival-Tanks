@@ -108,7 +108,7 @@ public class MainMenuM : MonoBehaviourPunCallbacks
             esperando.SetActive(false);
             encontrada.SetActive(true);
             //proba = 1;
-            PhotonNetwork.LoadLevel("M2");
+            PhotonNetwork.LoadLevel("MultiplayerRondas");
             
         }
     }

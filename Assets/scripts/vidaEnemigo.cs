@@ -16,7 +16,6 @@ public class vidaEnemigo : MonoBehaviour
     {
         ronda = GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas();
         if (ronda == null) { ronda = 1; }
-        Debug.LogWarning("rondaa " +ronda);
         if (ronda <= 20) {
             //Boss
             if (tipoE == 0) { vida = 270; }

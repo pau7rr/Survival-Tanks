@@ -50,5 +50,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 1b7b66dd671f8d94e965f9c400d51649
+  - enabled: 1
+    path: Assets/Scenes/Multiplayer/MultiplayerRondas.unity
+    guid: 75cc1ec98f87df144945e7995e79fc79
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 49cfc3714f64048489e30e28c69c1151, type: 2}

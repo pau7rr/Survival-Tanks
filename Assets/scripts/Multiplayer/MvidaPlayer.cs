@@ -32,7 +32,8 @@ public class MvidaPlayer : MonoBehaviour
         if (pv.IsMine)
         {
             barraDeVida.fillAmount = Mathf.Clamp(vida / TankStats.health, 0, 1f);
-            if (vida <= 0) { StartCoroutine(mandarMonedas()); ts.settiempoP(Time.timeSinceLevelLoad); StartCoroutine(mandarstats()); derrota();
+            if (vida <= 0) { //StartCoroutine(mandarMonedas()); ts.settiempoP(Time.timeSinceLevelLoad); StartCoroutine(mandarstats()); 
+                derrota();
                 pv.RPC("victoria", RpcTarget.Others);   pv.RPC("Deestroy", RpcTarget.AllBuffered);
             }
         }

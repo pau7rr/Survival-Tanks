@@ -7,6 +7,7 @@ public class MStats : MonoBehaviour
     static private bool primero = false;
     static public int victorias = 0;
     static public int derrotas = 0;
+    static public int spawns = 0;
     // Start is called before the first frame update
     void Start()
     {
