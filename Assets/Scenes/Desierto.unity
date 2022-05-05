@@ -869,7 +869,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -94, y: 147}
+  m_AnchoredPosition: {x: -93.99997, y: 147}
   m_SizeDelta: {x: -782.8, y: -383.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &745970178
@@ -12245,6 +12245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4116944207087837484, guid: 593a30f5b3e88834185ad7bb8411c4c3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -97.99997
+      objectReference: {fileID: 0}
     - target: {fileID: 4116944208251007352, guid: 593a30f5b3e88834185ad7bb8411c4c3, type: 3}
       propertyPath: m_Camera
       value: 
@@ -12843,7 +12847,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fb7ec1b4eea35bf48a8d15596be8cdfc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5771ccebf46152b4daf8cc8be9d6c0be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

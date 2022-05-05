@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 using Photon.Pun;
-
+using BayatGames.SaveGameFree;
 public class player_move : MonoBehaviourPun
 {
 
@@ -62,7 +62,7 @@ public class player_move : MonoBehaviourPun
     {
         tiempoentredisparos = start_tiempoentredisparos;
         rb.freezeRotation = true;
-        
+        if (SaveGame.Load<int>("guardado") == 1) { bombas = SaveGame.Load<int>("bombas") -1 ;  }
 
     }
 

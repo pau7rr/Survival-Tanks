@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject botonMulti;
     public GameObject botonsi;
     public GameObject botonno;
+    public GameObject itext;
     int guardado;
     void Start()
     {
@@ -30,7 +31,7 @@ public class MainMenu : MonoBehaviour
 
     public void Login()
     {
-        if (guardado == 1) { modal.SetActive(true); botonMulti.SetActive(false); botonno.SetActive(true); botonsi.SetActive(true); } else
+        if (guardado == 1) { modal.SetActive(true); botonMulti.SetActive(false); botonno.SetActive(true); botonsi.SetActive(true); itext.SetActive(false);} else
         {
             SceneManager.LoadScene(2);
         }

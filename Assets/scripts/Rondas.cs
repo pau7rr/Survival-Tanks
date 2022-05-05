@@ -30,8 +30,10 @@ public class Rondas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            
-        if (SaveGame.Load<int>("guardado") == 1) { ronda = SaveGame.Load<int>("ronda"); } else {
+        if (SaveGame.Load<int>("guardado") == 1) { 
+            ronda = SaveGame.Load<int>("ronda");
+            if (ronda >= 3) { maxSpawns = 1 ; }
+        } else {
             Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
             Instantiate(enemigo1, spawnpoint2.position, spawnpoint2.rotation);
             Instantiate(enemigo1, spawnpoint3.position, spawnpoint1.rotation);
@@ -40,6 +42,9 @@ public class Rondas : MonoBehaviour
         //ESPERAR 1SEC TRAS RESPAWNEAR
         player =GameObject.FindGameObjectWithTag("Player");
         inicioLista();
+        if (SaveGame.Load<int>("guardado") == 1) {
+            passarRonda();
+        }
     }
     public int getrondas() {
         return ronda;
@@ -63,7 +68,7 @@ public class Rondas : MonoBehaviour
         ronda = ronda + 1;
         //cada dos rondas dar una bomba
          player.GetComponent<player_move>().bombas += 1; 
-            textoRondas.text = "Round" + ronda;
+            textoRondas.text = ": " + ronda;
         spawns = 0;
         Debug.LogWarning("passo de ronda");
         if (ronda < 4) {

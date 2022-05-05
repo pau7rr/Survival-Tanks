@@ -49,10 +49,11 @@ public class Pause_menu : MonoBehaviour
         float vida = player.GetComponent<vidaPlayer>().vida;
         //corregir vida
         if (vida != TankStats.health) { vida -= 25; }
-        SaveGame.Save<int>("ronda", GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas() - 1);
+        SaveGame.Save<int>("ronda", GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas() -1);
         SaveGame.Save<Vector3>("pos", player.GetComponent<Transform>().position);
         SaveGame.Save<int>("mapa", SceneManager.GetActiveScene().buildIndex);
         SaveGame.Save<int>("guardado", 1);
+        SaveGame.Save<int>("bombas", player.GetComponent<player_move>().bombas); ;
         SaveGame.Save<int>("monedas", player.GetComponent<vidaPlayer>().monedas);
         SaveGame.Save<float>("vida", vida);
         Application.Quit();
