@@ -596,6 +596,7 @@ MonoBehaviour:
   monedas: 0
   textomonedas: {fileID: 0}
   barraDeVida: {fileID: 0}
+  t: {fileID: 6814745323945077495}
 --- !u!82 &6569604842277362416
 AudioSource:
   m_ObjectHideFlags: 0

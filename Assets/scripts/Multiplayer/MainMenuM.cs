@@ -21,7 +21,9 @@ public class MainMenuM : MonoBehaviourPunCallbacks
     public string[] maps = { "SampleScene", "Level2" };
 
     private bool isConnecting = false;
-
+    public GameObject buscando;
+    public GameObject esperando;
+    public GameObject encontrada;
     private const string GameVersion = "0.1";
     private const int MaxPlayersPerRoom = 2;
 
@@ -35,11 +37,12 @@ public class MainMenuM : MonoBehaviourPunCallbacks
     public void FindOpponent()
     {
         isConnecting = true;
-
+        /*
         findOpponentPanel.SetActive(false);
         waitingStatusPanel.SetActive(true);
+         waitingStatusText.text = "Searching...";*/
+        buscando.SetActive(true);
 
-        waitingStatusText.text = "Searching...";
 
         if (PhotonNetwork.IsConnected)
         {
@@ -85,8 +88,8 @@ public class MainMenuM : MonoBehaviourPunCallbacks
 
         if (playerCount != MaxPlayersPerRoom)
         {
-            waitingStatusText.text = "Waiting For Opponent";
-            Debug.Log("Client is waiting for opponent");
+            buscando.SetActive(false);
+            esperando.SetActive(true);
         }
         else
         {
@@ -102,8 +105,8 @@ public class MainMenuM : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.CurrentRoom.IsOpen = false;
 
-            waitingStatusText.text = "Opponent Found";
-            Debug.Log("Match is ready to begin");
+            esperando.SetActive(false);
+            encontrada.SetActive(true);
             //proba = 1;
             PhotonNetwork.LoadLevel("M2");
             

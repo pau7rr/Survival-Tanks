@@ -7,28 +7,32 @@ using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using BayatGames.SaveGameFree;
 public class vidaPlayer : MonoBehaviour
 {
     public float vida = TankStats.health;
     public int monedas = 0;
     public TextMeshProUGUI textomonedas;
     public Image barraDeVida;
+    public Transform t;
     //contador
     private float minutos;
     TankStats ts = new TankStats();
     void Start()
     {
         vida = TankStats.health;
+        //Cargar datos
+        if (SaveGame.Load<int>("guardado") == 1) { vida = SaveGame.Load<float>("vida"); t.position = SaveGame.Load<Vector3>("pos"); monedas = SaveGame.Load<int>("monedas"); }
         vida = Mathf.Clamp(vida, 0, TankStats.health);
         barraDeVida = GameObject.FindGameObjectWithTag("vida").GetComponent<Image>();
+        
     }
     // Update is called once per frame
     void Update()
     { // declarar valor de la vida, minimo y maximo
         textomonedas.text = ""+monedas;
         barraDeVida.fillAmount = Mathf.Clamp(vida / TankStats.health, 0, 1f);
-        if (vida <= 0) {  StartCoroutine(mandarMonedas()); StartCoroutine(mandarstats()); Destroy(this.gameObject); }
+        if (vida <= 0) {  StartCoroutine(mandarMonedas()); StartCoroutine(mandarstats()); SaveGame.Save<int>("guardado", 0); Destroy(this.gameObject); }
 
      
 

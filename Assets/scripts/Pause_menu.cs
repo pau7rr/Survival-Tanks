@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using BayatGames.SaveGameFree;
 
 public class Pause_menu : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Pause_menu : MonoBehaviour
     void Start()
     {
         pausemenu.SetActive(false);
+        //this.GetComponent<Canvas>().re
         Time.timeScale = 1f;
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -37,15 +39,24 @@ public class Pause_menu : MonoBehaviour
 
     public void Reiniciar()
     {
-
+        SaveGame.Save<int>("guardado", 0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         
     }
 
     public void Salir()
     {
-
-        SceneManager.LoadScene(1);
+        float vida = player.GetComponent<vidaPlayer>().vida;
+        //corregir vida
+        if (vida != TankStats.health) { vida -= 25; }
+        SaveGame.Save<int>("ronda", GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas() - 1);
+        SaveGame.Save<Vector3>("pos", player.GetComponent<Transform>().position);
+        SaveGame.Save<int>("mapa", SceneManager.GetActiveScene().buildIndex);
+        SaveGame.Save<int>("guardado", 1);
+        SaveGame.Save<int>("monedas", player.GetComponent<vidaPlayer>().monedas);
+        SaveGame.Save<float>("vida", vida);
+        Application.Quit();
+        //SceneManager.LoadScene(1);
     }
     public void Resume() {
         pausemenu.SetActive(false);
@@ -55,6 +66,7 @@ public class Pause_menu : MonoBehaviour
     }
     public void Mapa()
     {
+        SaveGame.Save<int>("guardado", 0);
         SceneManager.LoadScene(2);
     }
 

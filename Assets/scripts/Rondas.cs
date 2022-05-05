@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using BayatGames.SaveGameFree;
 public class Rondas : MonoBehaviour
 {
     //SPAWNS
@@ -30,10 +30,13 @@ public class Rondas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textoRondas.text = "Ronda:" + ronda;
-       Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
-        Instantiate(enemigo1, spawnpoint2.position, spawnpoint2.rotation);
-         Instantiate(enemigo1, spawnpoint3.position, spawnpoint1.rotation);
+            
+        if (SaveGame.Load<int>("guardado") == 1) { ronda = SaveGame.Load<int>("ronda"); } else {
+            Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
+            Instantiate(enemigo1, spawnpoint2.position, spawnpoint2.rotation);
+            Instantiate(enemigo1, spawnpoint3.position, spawnpoint1.rotation);
+        }
+        textoRondas.text = ": " + ronda;
         //ESPERAR 1SEC TRAS RESPAWNEAR
         player =GameObject.FindGameObjectWithTag("Player");
         inicioLista();
@@ -44,7 +47,7 @@ public class Rondas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textoRondas.text = "Ronda: " + ronda;
+        textoRondas.text = ": " + ronda;
         enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
         textoEnemigo.text = "Enemigos: " + enemigos.Length;
         if (enemigos.Length == 0) {

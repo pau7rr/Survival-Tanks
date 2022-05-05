@@ -6,14 +6,15 @@ using UnityEngine.SceneManagement;
 public class Selector_mapa : MonoBehaviour
 {
     GameObject music;
+    public Animator iconAnimator;
     // Start is called before the first frame update
     void Start()
     {
-       // music = GameObject.Find("MenuMusic");
-        if (GameObject.Find("MenuMusic") != null)
+        if (GameObject.Find("MenuMusic(Clone)") == null)
         {
-            music = GameObject.Find("MenuMusic");
+            Instantiate(music);
         }
+
         if (GameObject.Find("MenuMusic(Clone)") != null)
         {
             music = GameObject.Find("MenuMusic(Clone)");

@@ -16,10 +16,15 @@ public class LoginMenu : MonoBehaviour
     public TextMeshProUGUI user;
     public TextMeshProUGUI contraseña;
     public GameObject contra;
+    public Animator iconAnimator;
+    public GameObject music;
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (GameObject.Find("MenuMusic(Clone)") == null)
+        {
+            Instantiate(music);
+        }
     }
 
     // Update is called once per frame
@@ -32,7 +37,7 @@ public class LoginMenu : MonoBehaviour
     {
         //SceneManager.LoadScene(1);
         if (user.text != null && contraseña.text != null) {
-            
+            iconAnimator.Play("In");
             Debug.Log(contra.GetComponent<TMP_InputField>().text);
             StartCoroutine(CallLogin(user.text, contra.GetComponent<TMP_InputField>().text));
             
@@ -50,6 +55,7 @@ public class LoginMenu : MonoBehaviour
         if (www.error != null)
         {
             Debug.LogWarning("Error" + www.error);
+            iconAnimator.Play("Out");
         }
         else {
             string respuesta = www.downloadHandler.text;
