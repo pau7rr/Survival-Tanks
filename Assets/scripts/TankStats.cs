@@ -37,6 +37,11 @@ public class TankStats
     public float getTiempo() { return tiempoPartida; }
 
     public int getKills() { return kills; }
+
+    public string getToken() { return token; }
+    public string getNombre() { return nombre; }
+
+    public int getid() { return id; }
     public int getDisparos() { return disparos; }
 
     public int getDisparosAcertados() { return disparosAcertados; }
