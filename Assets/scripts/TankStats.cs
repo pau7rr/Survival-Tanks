@@ -39,6 +39,10 @@ public class TankStats
     public int getKills() { return kills; }
 
     public string getToken() { return token; }
+
+    //skin
+    public string getBody() { return body; }
+
     public string getNombre() { return nombre; }
 
     public int getid() { return id; }

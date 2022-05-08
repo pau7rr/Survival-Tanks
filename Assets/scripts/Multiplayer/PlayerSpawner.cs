@@ -13,6 +13,7 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
     public PhotonView pv;
     private static int contadorSpawns = 0;
     private static bool primerspawn = true;
+    public Transform camt;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,17 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
                 PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint[1].position, Quaternion.identity); contadorSpawns = 3;
             }
         } else {
+
+            //bosque
+            if (contadorSpawns == 2 || contadorSpawns == 3) { camt.position = new Vector3(-46, 4, -40); }
+            //bosque2
+            if (contadorSpawns == 4 || contadorSpawns == 5) { camt.position = new Vector3(33, -10, -40); }
+            //mazz
+            if (contadorSpawns == 6 || contadorSpawns == 7) { camt.position = new Vector3(31, 4, -40); }
+
+            if (contadorSpawns == 8 || contadorSpawns == 9) { camt.position = new Vector3(-3, 4, -40); }
+
+
             if (numberOFPlayers == 1) { PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint[contadorSpawns].position, Quaternion.identity); pv.RPC("sumarSpawn", RpcTarget.Others); }
             if (numberOFPlayers == 2)
             {
@@ -34,7 +46,7 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
         }
 
         primerspawn = false;
-
+       
         /*
         if (numberOFPlayers == 1) { PhotonNetwork.Instantiate(playerPrefab.name, new Vector2(UnityEngine.Random.Range(10.7f, 25.3f), 0f), Quaternion.identity); }
         if (numberOFPlayers == 2) { PhotonNetwork.Instantiate(playerPrefab.name, new Vector2(UnityEngine.Random.Range(-10.7f, -25.3f), 0f), Quaternion.identity); }
@@ -42,7 +54,7 @@ public class PlayerSpawner : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.Instantiate(playerPrefab.name, new Vector2(UnityEngine.Random.Range(-10.7f, -25.3f), 0f), Quaternion.identity);
         }*/
-       
+
     }
 
     [PunRPC]

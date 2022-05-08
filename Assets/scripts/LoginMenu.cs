@@ -91,10 +91,10 @@ public class LoginMenu : MonoBehaviour
             tank = JsonUtility.FromJson<TankPlayer>(respuesta);
             TankStats player = new TankStats();
             player.Stats(tank.strengh,tank.health,tank.speed,tank.tower,tank.body,tank.track, tank.bullet ,token, id, nombre);
-            Debug.LogWarning(TankStats.nombre);
+            Debug.LogWarning(TankStats.body);
             yield return new WaitForSeconds(0.5f);
             StartCoroutine(TankEnemySetup());
-            //SceneManager.LoadScene(1);
+           // 
         }
 
     }
@@ -115,8 +115,9 @@ public class LoginMenu : MonoBehaviour
         }
         else
         {
-            string respuesta = request.downloadHandler.text;
+            object respuesta = request;
             Debug.LogWarning("ENEMIGOS" + respuesta);
+            SceneManager.LoadScene(1);
             /*
             TankPlayer tank = new TankPlayer();
             tank = JsonUtility.FromJson<TankPlayer>(respuesta);

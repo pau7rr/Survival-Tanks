@@ -16,8 +16,17 @@ public class Skin : MonoBehaviour
     public Sprite[] spriteArray;
     void Start()
     {
-        AsyncOperationHandle<Sprite[]> spriteHandle = Addressables.LoadAssetAsync<Sprite[]>("Assets/assets/TankConstructor/Images/Towers/HeavyTowerA.png");
-        spriteHandle.Completed += LoadSpritesWhenReady;
+        TankStats ts = new TankStats();
+        
+        AsyncOperationHandle<Sprite[]> body = Addressables.LoadAssetAsync<Sprite[]>("Assets/assets/TankConstructor/Images/Towers/HeavyTowerA.png");
+        body.Completed += LoadSpritesWhenReady;
+
+        /*
+        Addressables.LoadAssetsAsync<Sprite>("MySprites", sprite =>
+        {
+            ts.getBody();
+            // Unused area
+        }).Completed += DidLoad;*/
     }
     void LoadSpritesWhenReady(AsyncOperationHandle<Sprite[]> handleToCheck)
     {
@@ -28,9 +37,19 @@ public class Skin : MonoBehaviour
         }
     }
 
+
+
     void ChangeSprite()
     {
         body.sprite = spriteArray[0];
     }
 
-}
+    private void DidLoad(AsyncOperationHandle<IList<Sprite>> iListOfSprites)
+    {
+        foreach (var item in iListOfSprites.Result)
+        {
+            Debug.Log("ITEM NAME IS: " + item.name.ToString());
+        }
+    }
+
+    }
