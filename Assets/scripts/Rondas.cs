@@ -14,7 +14,6 @@ public class Rondas : MonoBehaviour
     private int ronda = 1;
     private int spawns = 0;
     private int maxSpawns = 0;
-    private int maxenemigos = 3;
     private GameObject[] enemigos;
     public TextMeshProUGUI textoRondas;
     public TextMeshProUGUI textoEnemigo;
@@ -63,13 +62,13 @@ public class Rondas : MonoBehaviour
     }
 
     void passarRonda() {
-        player.GetComponent<vidaPlayer>().vida += 25;
-        if (player.GetComponent<vidaPlayer>().vida >= TankStats.maxhealth) { player.GetComponent<vidaPlayer>().vida = TankStats.maxhealth; }
-        ronda = ronda + 1;
-        //cada dos rondas dar una bomba
+         player.GetComponent<vidaPlayer>().vida += 25;
+         if (player.GetComponent<vidaPlayer>().vida >= TankStats.maxhealth) { player.GetComponent<vidaPlayer>().vida = TankStats.maxhealth; }
+         ronda = ronda + 1;
+         //cada dos rondas dar una bomba
          player.GetComponent<player_move>().bombas += 1; 
-            textoRondas.text = ": " + ronda;
-        spawns = 0;
+         textoRondas.text = ": " + ronda;
+         spawns = 0;
         Debug.LogWarning("passo de ronda");
         if (ronda < 4) {
             Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
@@ -170,19 +169,6 @@ public class Rondas : MonoBehaviour
 
     }
 
-    void reiniciolista() {
-        for (int i = 0; i < spawnsList.Count; i++)
-        {
-                spawnsList.RemoveAt(i);
-
-            
-        }
-        spawnsList.Add(spawnpoint1);
-        spawnsList.Add(spawnpoint2);
-        spawnsList.Add(spawnpoint3);
-        spawnsList.Add(spawnpoint4);
-        spawnsList.Add(spawnpoint5);
-    }
 
     void inicioLista() {
         //Añadimos Spawnpoints
@@ -217,15 +203,13 @@ public class Rondas : MonoBehaviour
         int enemigo1Spawn = Random.Range(0, 2);
         int enemigo2Spawn = Random.Range(0, 2);
         int enemigo3Spawn = Random.Range(0, 2);
-        Debug.LogWarning(enemigo1Spawn);
-        Debug.LogWarning(enemigo2Spawn);
+
         //Spawneo a los enemigos
         for (int i = 0; i <= 4; i++)
         {
             if (spawnNumber == i)
             {
                 Instantiate(spawnEnemies[enemigo1Spawn], spawnsList[i].position, spawnsList[i].rotation);
-                //spawnsList.RemoveAt(i);
             }
         }
      
@@ -234,7 +218,6 @@ public class Rondas : MonoBehaviour
             if (spawnNumber2 == i)
             {
                 Instantiate(spawnEnemies[enemigo2Spawn], spawnsList[i].position, spawnsList[i].rotation);
-                //spawnsList.RemoveAt(i);
             }
         }
 
@@ -243,7 +226,6 @@ public class Rondas : MonoBehaviour
             if (spawnNumber3 == i)
             {
                 Instantiate(spawnEnemies[enemigo3Spawn], spawnsList[i].position, spawnsList[i].rotation);
-               // spawnsList.RemoveAt(i);
             }
         }
     }

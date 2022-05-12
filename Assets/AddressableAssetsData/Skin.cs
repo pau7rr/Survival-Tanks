@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Skin : MonoBehaviour
@@ -14,42 +14,46 @@ public class Skin : MonoBehaviour
     public SpriteRenderer rueda2;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
+    private int contador = 0;
+    private List<Sprite> sprites = new List<Sprite>();
     void Start()
     {
-        TankStats ts = new TankStats();
-        
-        AsyncOperationHandle<Sprite[]> body = Addressables.LoadAssetAsync<Sprite[]>("Assets/assets/TankConstructor/Images/Towers/HeavyTowerA.png");
-        body.Completed += LoadSpritesWhenReady;
 
-        /*
-        Addressables.LoadAssetsAsync<Sprite>("MySprites", sprite =>
-        {
-            ts.getBody();
-            // Unused area
-        }).Completed += DidLoad;*/
+        Addressables.Initialize();
+        TankStats ts = new TankStats();
+        string bodyrute = ts.getBody().Split('/')[4];
+        string towerroute = ts.getTower().Split('/')[4];
+
+        Debug.LogWarning(towerroute);
+        AsyncOperationHandle<Sprite[]> body = Addressables.LoadAssetAsync<Sprite[]>(bodyrute);
+        AsyncOperationHandle<Sprite[]> tower = Addressables.LoadAssetAsync<Sprite[]>(towerroute);
+        body.Completed += LoadSpritesWhenReady;
+        tower.Completed += LoadSpritesWhenReady;
+  
     }
+
+
     void LoadSpritesWhenReady(AsyncOperationHandle<Sprite[]> handleToCheck)
     {
         if (handleToCheck.Status == AsyncOperationStatus.Succeeded)
         {
             spriteArray = handleToCheck.Result;
-            ChangeSprite();
+            contador += 1;
+            if (contador == 1) { ChangeBodySprite(); }
+            if (contador == 2) {   ChangeTowerSprite(); }
         }
     }
 
 
 
-    void ChangeSprite()
+    void ChangeBodySprite()
     {
         body.sprite = spriteArray[0];
     }
 
-    private void DidLoad(AsyncOperationHandle<IList<Sprite>> iListOfSprites)
+    void ChangeTowerSprite()
     {
-        foreach (var item in iListOfSprites.Result)
-        {
-            Debug.Log("ITEM NAME IS: " + item.name.ToString());
-        }
+        torre.sprite = spriteArray[0];
     }
 
     }

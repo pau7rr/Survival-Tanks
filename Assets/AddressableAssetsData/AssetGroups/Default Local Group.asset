@@ -18,7 +18,327 @@ MonoBehaviour:
   m_GUID: f69914434d344a6468104f7248c24329
   m_SerializeEntries:
   - m_GUID: f1ccc39a0a85606479e4fcb6e5ae2aa3
-    m_Address: Assets/assets/TankConstructor/Images/Towers/HeavyTowerA.png
+    m_Address: Assets/assets/TankConstructor/Towers/HeavyTowerA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d54dd0dff73f8d143ad4456394686d5c
+    m_Address: SmallHullB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: be4c24bb3e79f0046a8fb7bfdcbdc3d2
+    m_Address: MediumHullA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 519db26ac7648064fabb6f100ecfe3db
+    m_Address: SmallHullA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 353efa4030cebea40950b550b835d1bb
+    m_Address: HeavyHullD.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e0609a9292fd58642a68a660e8bab050
+    m_Address: MediumHullC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3174d3bca3b62c24896dabb9812253bb
+    m_Address: MediumHullB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e722d640e03e2154d89310b4e8b374db
+    m_Address: SmallHullC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4b2a9ffca2dd69347821d99550885818
+    m_Address: HeavyHullB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8c06fc87eec18e646ad87ef59d8ee962
+    m_Address: HeavyHullA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7d0f7900faab5fd4fa058828fd546492
+    m_Address: HeavyHullC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6c55d1b41192f50409d83ab5e5953d29
+    m_Address: SmallGunA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f30d740594c0d1842a4db8bfd3afc4f5
+    m_Address: Assets/assets/TankConstructor/Guns/HeavyGunD.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1c95c15e5b175194d9ef050f9da5caca
+    m_Address: Assets/assets/TankConstructor/Guns/RocketLauncherB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dba2347742dc4884a9f385a783661418
+    m_Address: MediumGunA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: abd23b35170eba442afc17d0a9f89770
+    m_Address: Assets/assets/TankConstructor/Guns/RocketLauncherA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6093598df13cc0e409217e28d25d435b
+    m_Address: HeavyGunB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b3d5a576150683f42a18c0ceb3d0203f
+    m_Address: Assets/assets/TankConstructor/Guns/SmallGunB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d31e091f0690ad24888d4b6cf2981d0d
+    m_Address: Assets/assets/TankConstructor/Guns/HeavyGunF.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 64b0356f87144f346aee6f16541b3baf
+    m_Address: Assets/assets/TankConstructor/Guns/MediumGunC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 158d5ec7b74dbff49a6fd04c12225a6e
+    m_Address: HeavyGunC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a65072100cf3fe54bb4febd94db58d97
+    m_Address: HeavyGunA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c6e5d078bcdd07746ace23393ca0db59
+    m_Address: Assets/assets/TankConstructor/Guns/SmallGunC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 07366037b42af934a87663a619a0cb59
+    m_Address: Assets/assets/TankConstructor/Guns/HeavyGunE.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 79ab9a8b8d2df024088cf7a3ca6dc45a
+    m_Address: Assets/assets/TankConstructor/Guns/HeavyGunH.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2dfe14f55ce28ed48aae82d39882325f
+    m_Address: Assets/assets/TankConstructor/Guns/MediumGunD.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4eeb73b17158c514eab3ed2d5244d873
+    m_Address: Assets/assets/TankConstructor/Guns/HeavyGunG.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ef52641bac94e0642b7d213ffbd429e8
+    m_Address: Assets/assets/TMediumGunB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 52786b274c91b9343b42f43961fa9e13
+    m_Address: Assets/assets/TankConstructor/GunConnectors/GunConnectorA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 43863ac6cf4a4634b9d02375d97d18b4
+    m_Address: Assets/assets/TankConstructor/GunConnectors/GunConnectorF.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 318781217d5bb2845b7a6d4f62a7a6c6
+    m_Address: Assets/assets/TankConstructor/GunConnectors/GunConnectorB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 24111c3867af83d438bfe9c330823230
+    m_Address: Assets/assets/TankConstructor/GunConnectors/GunConnectorE.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c86c775ea9cced44382391bf51439b49
+    m_Address: Assets/assets/TankConstructor/GunConnectors/GunConnectorD.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7f2347a43a312f34196dd2688bcb4f66
+    m_Address: Assets/assets/TankConstructor/GunConnectors/GunConnectorC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 86d685eee34509a4580b0a78fee15065
+    m_Address: Assets/assets/TankConstructor/Platforms/PlatformC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: aef66197c6706264793573979eddcf7f
+    m_Address: Assets/assets/TankConstructor/Platforms/PlatformA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: be7a40e048917e14b92dda9a1144294f
+    m_Address: Assets/assets/TankConstructor/Platforms/PlatformB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 84c072e35cd20eb408657d2a228bb6b1
+    m_Address: Assets/assets/TankConstructor/Projectiles/Laser.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 91121d9af3f3fff4ab68e02daf6eb228
+    m_Address: Assets/assets/TankConstructor/Projectiles/07.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c143aadfc38d40f4aabc25fd7408b9ad
+    m_Address: Assets/assets/TankConstructor/Projectiles/Rocket.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2294e3a45eaea30488d66ea257ce20ff
+    m_Address: Assets/assets/TankConstructor/Projectiles/34.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f3c82fead1e26714fb818b88458d1f7e
+    m_Address: Assets/assets/TankConstructor/Projectiles/02.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 24bcd8d5be4eff74eab5d68f2b2d2e68
+    m_Address: Assets/assets/TankConstructor/Projectiles/36.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6589c860fd7dda740a76108fa9b55e35
+    m_Address: Assets/assets/TankConstructor/Projectiles/15.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 06de3d445ff946a49aec35b1690b2691
+    m_Address: Assets/assets/TankConstructor/Projectiles/Bomb.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 46a1119687b376743b1f19f928aca8ba
+    m_Address: Assets/assets/TankConstructor/Projectiles/RoundMine.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e6e9d34637947b2459fd60121b43f188
+    m_Address: Assets/assets/TankConstructor/Projectiles/18.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 479b5200151b3674fbfd04f520cb302d
+    m_Address: Assets/assets/TankConstructor/Projectiles/MediumShell.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 974deb62980b0a94fb4f6b0fc7ecede5
+    m_Address: Assets/assets/TankConstructor/Projectiles/33.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b781cc885b0f8274083fdebc5afc9ba9
+    m_Address: Assets/assets/TankConstructor/Projectiles/14.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5deff0a435f7aff43be451055a5d555d
+    m_Address: Assets/assets/TankConstructor/Projectiles/Plazm.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dd2b712412a05644da4d741f11a4b1f2
+    m_Address: Assets/assets/TankConstructor/Projectiles/LightShell.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9f9da6394c1d1c04684230b88b3e8f12
+    m_Address: Assets/assets/TankConstructor/Projectiles/10.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cf8aac7c3d1e73f49a8de23bdb4bd6ce
+    m_Address: Assets/assets/TankConstructor/Projectiles/HeavyShell.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c433d9ca749351c4f8acb6f70448add5
+    m_Address: Assets/assets/TankConstructor/Towers/HeavyTowerD.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 31081d7c2be8bc34d8981be9ebf32e0d
+    m_Address: Assets/assets/TankConstructor/Towers/MediumTowerA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d4560c6d6fc01cb42a07c7c64db28fde
+    m_Address: Assets/assets/TankConstructor/Towers/SmallTowerA.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 50fce1f3a7f96db4ebed8cd32d1502d5
+    m_Address: Assets/assets/TankConstructor/Towers/HeavyTowerB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 824ea3f6607b3d444ab24cd5340a1e5f
+    m_Address: Assets/assets/TankConstructor/Towers/SmallTowerC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 63409559e2f661242b7771cf7d2728ac
+    m_Address: Assets/assets/TankConstructor/Towers/MediumTowerC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f523419b37f619c43b0e32f6e2e524af
+    m_Address: Assets/assets/TankConstructor/Towers/MediumTowerB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 175673e2c2e70c74a901e9ad4cab8a44
+    m_Address: Assets/assets/TankConstructor/Towers/SmallTowerB.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 78696e24cbcb7d0468b6482fb15339e5
+    m_Address: Assets/assets/TankConstructor/Towers/HeavyTowerC.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: db9044ee40360124a8c0c0169a8bfe87
+    m_Address: Assets/assets/TankConstructor/Towers/RocketLauncher.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eb1901a4dd1676441a505df73e03038a
+    m_Address: "Assets/assets/TankConstructor/Tracks/Track\u0421Frame1.png"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5d095de063c482c4a8b4d113bb0c38a0
+    m_Address: Assets/assets/TankConstructor/Tracks/TrackAFrame1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d474f9cfb1d97014b8eee1d937a2cb4f
+    m_Address: Assets/assets/TankConstructor/Tracks/TrackDFrame2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3a6903d20203376449f9e2d70eee36f2
+    m_Address: Assets/assets/TankConstructor/Tracks/TrackBFrame2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4b4450efde3e6f346b6ad566845338f7
+    m_Address: "Assets/assets/TankConstructor/Tracks/Track\u0421Frame2.png"
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: dbb6e3fbaab305d43b5605af51a8052a
+    m_Address: Assets/assets/TankConstructor/Tracks/TrackDFrame1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: eddd6dfee091cce4db8b78c86e8d427b
+    m_Address: Assets/assets/TankConstructor/Tracks/TrackAFrame2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6e3675dd33e7b404b86496d5a7c4f3f9
+    m_Address: Assets/assets/TankConstructor/Tracks/TrackBFrame1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3b503a875a001074184311280f8ac93a
+    m_Address: Heavy1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 21b3b0323ea23bf478a5193816a05859
+    m_Address: Heavy2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 59baae1a24a25e84eb5294e57d480ed0
+    m_Address: Heavy3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 48cea588187a694479122ca05686bc61
+    m_Address: Light1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ab6f6a9e0c89d5f4dab77871463d931e
+    m_Address: Light2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f63d4da7936eaf44d924a358a31c7c08
+    m_Address: Light3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 207863162236add44940e1650f991e78
+    m_Address: Medium1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3ad1b31ccf98f8d4ca8a8f74ed3d26eb
+    m_Address: Medium2.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b2db8a9fe4762b94982216630ed35f95
+    m_Address: Medium3.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

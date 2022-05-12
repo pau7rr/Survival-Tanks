@@ -38,15 +38,12 @@ public class MvidaPlayer : MonoBehaviour
             }
         }
 
-
     }
 
     [PunRPC]
     public void bajarvida(float daño) {
         if (pv.IsMine) {
             vida = vida - daño;
-            
-            Debug.LogWarning("klk");
         }
        
     }

@@ -39,10 +39,6 @@ public class MainMenu : MonoBehaviour
     public void CargarPartida()
     {
         //check de la musica
-        if (GameObject.Find("MenuMusic") != null)
-        {
-            music = GameObject.Find("MenuMusic");
-        }
         if (GameObject.Find("MenuMusic(Clone)") != null)
         {
             music = GameObject.Find("MenuMusic(Clone)");

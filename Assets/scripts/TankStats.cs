@@ -43,6 +43,11 @@ public class TankStats
     //skin
     public string getBody() { return body; }
 
+    public string getTower() { return tower; }
+
+    public string getTrack() { return track; }
+
+    public string getBullet() { return bullet; }
     public string getNombre() { return nombre; }
 
     public int getid() { return id; }

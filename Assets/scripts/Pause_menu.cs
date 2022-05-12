@@ -57,7 +57,6 @@ public class Pause_menu : MonoBehaviour
         SaveGame.Save<int>("monedas", player.GetComponent<vidaPlayer>().monedas);
         SaveGame.Save<float>("vida", vida);
         Application.Quit();
-        //SceneManager.LoadScene(1);
     }
     public void Resume() {
         pausemenu.SetActive(false);
