@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 4964069596056852996}
   - component: {fileID: 568716381240476941}
   - component: {fileID: 167789563637651621}
+  - component: {fileID: 5709032715610753795}
   m_Layer: 0
   m_Name: Laser
   m_TagString: bala
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 84c072e35cd20eb408657d2a228bb6b1, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +87,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &5986937887494584609
@@ -238,3 +239,16 @@ MonoBehaviour:
   scriptsToIgnore:
   - {fileID: 3061436424665774296}
   - {fileID: 167789563637651621}
+--- !u!114 &5709032715610753795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5017137088148549209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 354c3324fb883204182f3204dbf533ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bala: {fileID: 2076216900616141664}

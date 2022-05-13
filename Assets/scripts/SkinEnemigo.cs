@@ -6,30 +6,34 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SkinEnemigo : MonoBehaviour
 {
-    public SpriteRenderer torreB;
-    [SerializeField] public SpriteRenderer body;
+    public SpriteRenderer body;
     public SpriteRenderer torre;
-    public SpriteRenderer gunconector;
     public SpriteRenderer rueda1;
     public SpriteRenderer rueda2;
-    public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
     private int contador = 0;
-    private List<Sprite> sprites = new List<Sprite>();
+   private string bodyrute;
+    private string towerroute;
+    private string trackroute;
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        TankStats ts = new TankStats();
-        string bodyrute = ts.getBody().Split('/')[4];
-        string towerroute = ts.getTower().Split('/')[4];
-        string trackroute = ts.getTrack().Split('/')[4];
-
-        Debug.LogWarning(bodyrute);
+        DatosEnemigosParseado de = new DatosEnemigosParseado();
+   
+            bodyrute = de.getE1().body.Split('/')[6];
+            towerroute = de.getE1().tower.Split('/')[6];
+            trackroute = de.getE1().track.Split('/')[6];
+     
+      //  Debug.LogWarning(bodyrute);
+       
         AsyncOperationHandle<Sprite[]> body = Addressables.LoadAssetAsync<Sprite[]>(bodyrute);
-        AsyncOperationHandle<Sprite[]> tower = Addressables.LoadAssetAsync<Sprite[]>(bodyrute);
+        AsyncOperationHandle<Sprite[]> tower = Addressables.LoadAssetAsync<Sprite[]>(towerroute);
+        AsyncOperationHandle<Sprite[]> track = Addressables.LoadAssetAsync<Sprite[]>(trackroute);
         body.Completed += LoadSpritesWhenReady;
         tower.Completed += LoadSpritesWhenReady;
-
+        track.Completed += LoadSpritesWhenReady;
     }
     void LoadSpritesWhenReady(AsyncOperationHandle<Sprite[]> handleToCheck)
     {
@@ -39,7 +43,7 @@ public class SkinEnemigo : MonoBehaviour
             contador += 1;
             if (contador == 1) { ChangeBodySprite(); }
             if (contador == 2) { ChangeTowerSprite(); }
-            if (contador == 1) { ChangeTrackSprite(); }
+            if (contador == 3) { ChangeTrackSprite(); }
         }
     }
 

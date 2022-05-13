@@ -6,20 +6,13 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Skin : MonoBehaviour
 {
-    public SpriteRenderer torreB;
     public SpriteRenderer body;
     public SpriteRenderer torre;
-    public SpriteRenderer gunconector;
-    public SpriteRenderer rueda1;
-    public SpriteRenderer rueda2;
     public SpriteRenderer spriteRenderer;
     public Sprite[] spriteArray;
     private int contador = 0;
-    private List<Sprite> sprites = new List<Sprite>();
     void Start()
     {
-
-        Addressables.Initialize();
         TankStats ts = new TankStats();
         string bodyrute = ts.getBody().Split('/')[4];
         string towerroute = ts.getTower().Split('/')[4];

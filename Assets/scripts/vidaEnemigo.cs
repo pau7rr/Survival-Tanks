@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,14 +16,16 @@ public class vidaEnemigo : MonoBehaviour
     void Start()
     {
         ronda = GameObject.FindGameObjectWithTag("rondas").GetComponent<Rondas>().getrondas();
+        DatosEnemigosParseado de = new DatosEnemigosParseado();
+        float velocidad = this.GetComponent<AIPath>().maxSpeed;
         if (ronda == null) { ronda = 1; }
         if (ronda <= 20) {
             //Boss
             if (tipoE == 0) { vida = 270; }
-            //Enemigos
-            if (tipoE == 1) { vida = 40; }
-            if (tipoE == 2) { vida = 20; }
-            if (tipoE == 3) { vida = 80; }
+            //Set up Enemigos
+            if (tipoE == 1) { vida = de.getE1().health; velocidad = de.getE1().speed;}
+            if (tipoE == 2) { vida = de.getE2().health; velocidad = de.getE2().speed; }
+            if (tipoE == 3) { vida = de.getE3().health; velocidad = de.getE3().speed; }
         }
 
         if (ronda >= 21)
@@ -30,9 +33,9 @@ public class vidaEnemigo : MonoBehaviour
             //Boss
             if (tipoE == 0) { vida = 315; }
             //Enemigos
-            if (tipoE == 1) { vida = 60; }
-            if (tipoE == 2) { vida = 40; }
-            if (tipoE == 3) { vida = 110; }
+            if (tipoE == 1) { vida = de.getE1().health +25; }
+            if (tipoE == 2) { vida = de.getE2().health +25; }
+            if (tipoE == 3) { vida = de.getE3().health +25; }
         }
         Debug.LogWarning(vida);
     }

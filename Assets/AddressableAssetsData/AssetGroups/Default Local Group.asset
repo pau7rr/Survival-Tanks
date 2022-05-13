@@ -170,7 +170,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 91121d9af3f3fff4ab68e02daf6eb228
-    m_Address: Assets/assets/TankConstructor/Projectiles/07.png
+    m_Address: 01.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c143aadfc38d40f4aabc25fd7408b9ad
@@ -274,35 +274,35 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: eb1901a4dd1676441a505df73e03038a
-    m_Address: "Assets/assets/TankConstructor/Tracks/Track\u0421Frame1.png"
+    m_Address: "Track\u0421Frame1.png"
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5d095de063c482c4a8b4d113bb0c38a0
-    m_Address: Assets/assets/TankConstructor/Tracks/TrackAFrame1.png
+    m_Address: TrackAFrame1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: d474f9cfb1d97014b8eee1d937a2cb4f
-    m_Address: Assets/assets/TankConstructor/Tracks/TrackDFrame2.png
+    m_Address: TrackDFrame2.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3a6903d20203376449f9e2d70eee36f2
-    m_Address: Assets/assets/TankConstructor/Tracks/TrackBFrame2.png
+    m_Address: TrackBFrame2.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4b4450efde3e6f346b6ad566845338f7
-    m_Address: "Assets/assets/TankConstructor/Tracks/Track\u0421Frame2.png"
+    m_Address: "Track\u0421Frame2.png"
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: dbb6e3fbaab305d43b5605af51a8052a
-    m_Address: Assets/assets/TankConstructor/Tracks/TrackDFrame1.png
+    m_Address: TrackDFrame1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: eddd6dfee091cce4db8b78c86e8d427b
-    m_Address: Assets/assets/TankConstructor/Tracks/TrackAFrame2.png
+    m_Address: TrackAFrame2.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6e3675dd33e7b404b86496d5a7c4f3f9
-    m_Address: Assets/assets/TankConstructor/Tracks/TrackBFrame1.png
+    m_Address: TrackBFrame1.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3b503a875a001074184311280f8ac93a

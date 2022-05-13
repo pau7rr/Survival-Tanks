@@ -13,7 +13,7 @@ public class EnemyStat
      public string tower;
      public string body;
      public string track;
-     public string bullet;
+     public string bullet = "p";
     // Start is called before the first frame update
     void Start()
     {

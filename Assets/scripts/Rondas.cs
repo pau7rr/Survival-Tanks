@@ -53,7 +53,7 @@ public class Rondas : MonoBehaviour
     {
         textoRondas.text = ": " + ronda;
         enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
-        textoEnemigo.text = "Enemigos: " + enemigos.Length;
+        textoEnemigo.text = ": " + enemigos.Length;
         if (enemigos.Length == 0) {
            // reiniciolista();
             if (spawns == maxSpawns) { passarRonda();} else { Spawn(); }

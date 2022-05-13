@@ -58,6 +58,11 @@ public class Pause_menu : MonoBehaviour
         SaveGame.Save<float>("vida", vida);
         Application.Quit();
     }
+    public void SalirSinguardar()
+    {
+        SaveGame.Save<int>("guardado", 0);
+        SceneManager.LoadScene(1);
+    }
     public void Resume() {
         pausemenu.SetActive(false);
         Time.timeScale = 1f;

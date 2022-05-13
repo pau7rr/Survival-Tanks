@@ -22,6 +22,15 @@ public class DatosEnemigosParseado
     public EnemyStat getE1() {
         return normal;
     }
+
+    public EnemyStat getE2()
+    {
+        return pequeño;
+    }
+    public EnemyStat getE3()
+    {
+        return pesado;
+    }
     // Update is called once per frame
     void Update()
     {

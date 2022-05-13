@@ -232,7 +232,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3180533977576115889}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -314,7 +314,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3279801801578868952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: -1700233395413378912}
   - component: {fileID: -4428930635369786590}
   - component: {fileID: 7507801526857051384}
+  - component: {fileID: 2303676537951288684}
   m_Layer: 0
   m_Name: enemigo3
   m_TagString: Enemigo
@@ -723,7 +724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoentredisparos: 1.8
-  bala: {fileID: 5017137088148549209, guid: d6863f609045e5d49a5f7a8a73ea8c43, type: 3}
+  bala: {fileID: 5017137088148549209, guid: 9cbd5c254e5a5534eaf6812d93063c7e, type: 3}
   start_tiempoentredisparos: 1.8
   jugador: {fileID: 0}
   bulledspeed: 20
@@ -810,6 +811,23 @@ PolygonCollider2D:
       - {x: -1.0978832, y: -1.3350556}
       - {x: 1.0022398, y: -1.3669364}
       - {x: 0.88240576, y: 0.45494753}
+--- !u!114 &2303676537951288684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8228167123690809997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13a056df6d960714ab3d9ddd01ec2a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 6263027776370238975}
+  torre: {fileID: 5113690447140884134}
+  rueda1: {fileID: 4220043952502917573}
+  rueda2: {fileID: 3851839401721531624}
+  spriteArray: []
 --- !u!1 &8314612167096853160
 GameObject:
   m_ObjectHideFlags: 0
