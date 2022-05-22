@@ -15,8 +15,6 @@ public class vidaPlayer : MonoBehaviour
     public TextMeshProUGUI textomonedas;
     public Image barraDeVida;
     public Transform t;
-    //contador
-    private float minutos;
     TankStats ts = new TankStats();
     void Start()
     {

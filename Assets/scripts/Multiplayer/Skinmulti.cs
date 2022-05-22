@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using Photon.Pun;
 
-public class Skin : MonoBehaviour
+public class Skinmulti : MonoBehaviour
 {
+    private PhotonView pv;
     public SpriteRenderer body;
     public SpriteRenderer torre;
     public SpriteRenderer spriteRenderer;
@@ -13,6 +16,7 @@ public class Skin : MonoBehaviour
     private int contador = 0;
     void Start()
     {
+        if (!pv.IsMine) { return; }
         TankStats ts = new TankStats();
         string bodyrute = ts.getBody().Split('/')[4];
         string towerroute = ts.getTower().Split('/')[4];
@@ -20,7 +24,7 @@ public class Skin : MonoBehaviour
         AsyncOperationHandle<Sprite[]> tower = Addressables.LoadAssetAsync<Sprite[]>(towerroute);
         body.Completed += LoadSpritesWhenReady;
         tower.Completed += LoadSpritesWhenReady;
-  
+
     }
 
 
@@ -31,7 +35,7 @@ public class Skin : MonoBehaviour
             spriteArray = handleToCheck.Result;
             contador += 1;
             if (contador == 1) { ChangeBodySprite(); }
-            if (contador == 2) {   ChangeTowerSprite(); }
+            if (contador == 2) { ChangeTowerSprite(); }
         }
     }
 
@@ -46,5 +50,4 @@ public class Skin : MonoBehaviour
     {
         torre.sprite = spriteArray[0];
     }
-
-    }
+}

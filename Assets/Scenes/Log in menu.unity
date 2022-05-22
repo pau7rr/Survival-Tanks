@@ -240,8 +240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 125, y: 0}
+  m_SizeDelta: {x: 250, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &86365181
 MonoBehaviour:
@@ -942,7 +942,7 @@ MonoBehaviour:
   - {fileID: 199179843}
   texts:
   - {fileID: 429101729}
-  - {fileID: 0}
+  - {fileID: 429101729}
 --- !u!114 &257150305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,7 +1016,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 325802525}
   m_TextViewport: {fileID: 2036642923}
   m_TextComponent: {fileID: 429101731}
   m_Placeholder: {fileID: 178140805}
@@ -1633,7 +1633,7 @@ MonoBehaviour:
   - {fileID: 1905577341}
   texts:
   - {fileID: 1781292260}
-  - {fileID: 0}
+  - {fileID: 1781292260}
 --- !u!114 &413839180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,7 +1707,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 325802525}
   m_TextViewport: {fileID: 682764633}
   m_TextComponent: {fileID: 1781292262}
   m_Placeholder: {fileID: 0}

@@ -170,7 +170,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 91121d9af3f3fff4ab68e02daf6eb228
-    m_Address: 01.png
+    m_Address: 07.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: c143aadfc38d40f4aabc25fd7408b9ad
@@ -178,19 +178,19 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 2294e3a45eaea30488d66ea257ce20ff
-    m_Address: Assets/assets/TankConstructor/Projectiles/34.png
+    m_Address: 34.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f3c82fead1e26714fb818b88458d1f7e
-    m_Address: Assets/assets/TankConstructor/Projectiles/02.png
+    m_Address: 02.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 24bcd8d5be4eff74eab5d68f2b2d2e68
-    m_Address: Assets/assets/TankConstructor/Projectiles/36.png
+    m_Address: 36.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6589c860fd7dda740a76108fa9b55e35
-    m_Address: Assets/assets/TankConstructor/Projectiles/15.png
+    m_Address: 15.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 06de3d445ff946a49aec35b1690b2691
@@ -202,7 +202,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: e6e9d34637947b2459fd60121b43f188
-    m_Address: Assets/assets/TankConstructor/Projectiles/18.png
+    m_Address: 18.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 479b5200151b3674fbfd04f520cb302d
@@ -210,11 +210,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 974deb62980b0a94fb4f6b0fc7ecede5
-    m_Address: Assets/assets/TankConstructor/Projectiles/33.png
+    m_Address: 33.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: b781cc885b0f8274083fdebc5afc9ba9
-    m_Address: Assets/assets/TankConstructor/Projectiles/14.png
+    m_Address: 14.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 5deff0a435f7aff43be451055a5d555d
@@ -226,7 +226,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 9f9da6394c1d1c04684230b88b3e8f12
-    m_Address: Assets/assets/TankConstructor/Projectiles/10.png
+    m_Address: 10.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: cf8aac7c3d1e73f49a8de23bdb4bd6ce
@@ -339,6 +339,10 @@ MonoBehaviour:
     m_SerializedLabels: []
   - m_GUID: b2db8a9fe4762b94982216630ed35f95
     m_Address: Medium3.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 839b2d9fa8155dc489ea2af1a077dfb5
+    m_Address: 01.png
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

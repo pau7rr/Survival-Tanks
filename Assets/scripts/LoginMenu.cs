@@ -69,7 +69,6 @@ public class LoginMenu : MonoBehaviour
 
     public IEnumerator TankSetup(string token, string nombre, int id)
     {
-        Debug.LogWarning(token);
         UnityWebRequest request = UnityWebRequest.Get("https://survival-tanks-api.herokuapp.com/api/usertank");
         request.SetRequestHeader("Authorization", "Bearer " + token );
         yield return request.Send();
@@ -105,13 +104,11 @@ public class LoginMenu : MonoBehaviour
         else
         {
             string respuesta = request.downloadHandler.text;
-            Debug.LogWarning("ENEMIGOS" + respuesta);
             DatosEnemigos datos = new DatosEnemigos();
             datos = JsonUtility.FromJson<DatosEnemigos>(respuesta);
             //parseamos los datos
             DatosEnemigosParseado de = new DatosEnemigosParseado();
             de.setEnemys(datos.data[0], datos.data[1], datos.data[2]);
-            Debug.LogWarning("sa" + de.getE2().bullet);
             yield return new WaitForSeconds(1.4f);
             SceneManager.LoadScene(1);
         }

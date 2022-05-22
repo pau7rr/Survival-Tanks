@@ -8042,7 +8042,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Disparar: Click derecho
+  m_text: 'Disparar: Click izquierdo
 
     Bomba: E
 
@@ -8328,6 +8328,7 @@ MonoBehaviour:
   monedas: 0
   textomonedas: {fileID: 0}
   barraDeVida: {fileID: 1629115999685769926}
+  t: {fileID: 0}
 --- !u!1 &6258107329271799645
 GameObject:
   m_ObjectHideFlags: 0
@@ -9174,8 +9175,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61, y: -622}
-  m_SizeDelta: {x: 286.04, y: 50}
+  m_AnchoredPosition: {x: -24.69, y: -622}
+  m_SizeDelta: {x: 358.66, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8229128649272557737
 CanvasRenderer:

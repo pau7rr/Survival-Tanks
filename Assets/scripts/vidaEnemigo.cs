@@ -37,7 +37,6 @@ public class vidaEnemigo : MonoBehaviour
             if (tipoE == 2) { vida = de.getE2().health +25; }
             if (tipoE == 3) { vida = de.getE3().health +25; }
         }
-        Debug.LogWarning(vida);
     }
 
     // Update is called once per frame

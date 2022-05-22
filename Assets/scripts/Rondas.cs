@@ -69,7 +69,6 @@ public class Rondas : MonoBehaviour
          player.GetComponent<player_move>().bombas += 1; 
          textoRondas.text = ": " + ronda;
          spawns = 0;
-        Debug.LogWarning("passo de ronda");
         if (ronda < 4) {
             Instantiate(enemigo1, spawnpoint1.position, spawnpoint1.rotation);
             Instantiate(enemigo1, spawnpoint2.position, spawnpoint2.rotation);
